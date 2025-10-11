@@ -14,20 +14,22 @@ p{ /*The border that will go around all <p> elements*/
 .bothlist { /*Class that applies to all elements in section:bothlist*/
     display: grid; /*Created the two columns of the two list*/
     grid-template-columns: auto auto; /*Two equal columns*/
-    gap: 1px; /*Space between columns */
-    margin-right: 25%;/*Pushed equally on both sides*/
-    margin-left: 25%;/*Pushed equally on both sides*/
-}
-.bothlist ul { /*Class that affects the ul's in the section:bothlist*/
-    text-align: start;
-    background-color:#FF000080;
-    border-radius: 25px;
-    border: 5px solid #ddd;
-    padding: 5%;
+    gap: px; /*Space between columns */
+    justify-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 25%;
     margin-left: 25%;
+}
+.bothlist ul { /*Class that affects the ul's in the section:bothlist*/
+    text-align:left;
+    background-color:#FF000080;
+    border-radius: 25px;
+    border: 5px solid #ddd;
+}
+.bothlist li {
+    padding: 10px;
+    margin: 0 auto;
 }
 img{ /*Border around all images*/
     width: 20%;
