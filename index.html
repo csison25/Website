@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <!-- Homepage -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="icon" href="Pictures/sad_hamster.png" type="image/png">
-    <title>Cj's Webpage</title>
-</head>
-    <header>
-        <h1>Who is This Mysterious Man?</h1>
-    </header>
-<body>
-    <img src="Pictures/profilepic.jpg">
-    <p>
-        Hello and welcome to my webpage!<br>
-        My name is Cj Sison and this webpage is about myself.<br>
-        I am 26 years old, I live in Bremerton and graduated from Central Kitsap High School. I <br>
-        have worked in McDonalds for 10 years and was a General Manager for the last 4 years.<br>
-        Some of you may know me or know of me as I used to run the McDonald's in Silverdale.<br>
-    </p>
-    <h2 id="myhobbies">My Hobbies:</h2> 
-    <h2 id="interest">Interest:</h2>
-    <br>
-    <ul>
-        <li>Crochetting</li>
-        <li>Playing video games</li>
-        <li>Herpteculture</li>
-        <li>Kendama</li>
-        <li>Ping pong</li>
-        <li>Strength training</li>
-    </ul>
-    <!--List for Interest:-->
-    <ul>
-        <li>Travelling</li>
-        <li>Streaming</li>
-        <li>Pokemon VGC</li>
-    </ul>
-    <h2>My Dogs</h2>
-    <img src="Pictures/benji.jpg">
-    <img src="Pictures/bubbles.jpg">
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="icon" href="Pictures/sad_hamster.png" type="image/png">
+        <title>Cj's Webpage</title><!--title of webpage, shows in browser tab-->
+    </head>
+    <body>
+        <header>
+            <h1>Who is This Mysterious Man?</h1>
+            <img src="Pictures/profilepic.jpg">
+        </header>
+        <main>
+            <p id="introduction">
+                <strong>Hello and welcome to my webpage!</strong><br>
+                My name is Cj Sison and this webpage is about myself.
+                I am 26 years old, I live in Bremerton and graduated from Central Kitsap High School. I 
+                have worked in McDonalds for 10 years and was a General Manager for the last 4 years.
+                Some of you may know me or know of me as I used to run the McDonald's in Silverdale.
+                Currently I am going to <a href="https://www.olympic.edu/">Olympic College</a> Getting 
+                my Associates degree in Software Development. 
+            </p>
+            <h2 id="myhobbies">My Hobbies:</h2> 
+            <h2 id="interest">Interest:</h2>
+            <br>
+            <section id="hobbyandinterestlist">
+                <ul><!--Unorder list for hobbies-->
+                    <li>Crochetting</li>
+                    <li>Playing video games</li>
+                    <li>Herpteculture</li>
+                    <li>Kendama</li>
+                    <li>Ping pong</li>
+                    <li>Strength training</li>
+                </ul>
+                <ul><!--Unorder List for Interest:-->
+                    <li>Travelling</li>
+                    <li>Streaming</li>
+                    <li>Pokemon VGC</li>
+                </ul>
+            </section>
+            <h2>My Dogs</h2>
+            <p id="doggos"><!--Paragraph about my dogs-->
+                I have two dogs. Benji (left image) and Bubbles (Right image). 
+                Benji is a mix of 4 dog breeds and is 7 years old. Bubbles is
+                mix of 2 dog breeds and is 6 years old. Benji also has two 
+                different colored eyes.
+            </p>
+            <img src="Pictures/benji.jpg" alt="Picture of a brown dog with a red handkerchief">
+            <img src="Pictures/bubbles.jpg" alt="Picture of a smiling pitbull with light blue eyes">
+        </main>
+        <footer>
+            &copy; Copyright Cj Sison 2025
+        </footer>
+    </body>
 </html>

@@ -1,22 +1,61 @@
 body{
     text-align: center;
 }
+p{
+    margin-right: 25%;
+    margin-left: 25%; 
+}
+#introduction{
+background-color:#FF000080;
+border-radius: 25px;
+border: 5px solid #ddd;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 25%;
+margin-left: 25%;
+}
 ul{
+    /*This makes the two unorderlist be next to eachother headers aligned*/
+    text-align: left;
     display: inline-table;
     margin:  0 auto;
     padding-inline: 50px;
 }
 #myhobbies{
+    /*This makes the two h2 headers be next to each other*/
     display: inline;
     padding-right: 90px;
     padding-left: 20px;
 }
 #interest{
+    /*This makes the two h2 headers be next to each other*/
     display: inline;
     padding-right: 90px;
     padding-left: 20px;
 }
+#hobbyandinterestlist{
+background-color:#FF000080;
+border-radius: 25px;
+border: 5px solid #ddd;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 25%;
+margin-left: 25%;
+}
+#doggos{
+background-color:#FF000080;
+border-radius: 25px;
+border: 5px solid #ddd;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 25%;
+margin-left: 25%;
+}
 img{
+    /*Border around all images*/
     width: 20%;
     height: 20%;
     border: 1px solid #ddd;
