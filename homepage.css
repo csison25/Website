@@ -1,41 +1,71 @@
-body{
+:root {
+    --text_background_color: rgba(255, 0, 0, 0.4);
+    --border_color: rgb(221, 221, 221);
+    --link_color: rgb(94, 131, 252);
+    --link_hover_color: rgb(122, 21, 216);
+    --oc_link_hover_color: rgb(25, 163, 13);
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center; /*text in the body will be centered*/
 }
-p{ /*The border that will go around all <p> elements*/
-    background-color:#FF000080;
-    border-radius: 25px;
-    border: 5px solid #ddd;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+h1, h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    text-shadow: .1em .01em .1em var(--text_background_color);
+}
+a {
+    color: var(--link_color);
+}
+a:hover {
+    color: var(--link_hover_color);
+    font-size: 150%;
+}
+main>p { 
+    text-align: left;
+    text-indent: 2em;
+    line-height: 1.5em;
+    /*The border and color that will go around all <p> elements*/
+    background-color: var(--text_background_color);
+    border-radius: 1em;
+    border: .25em solid var(--border_color);
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     margin-right: 25%;
     margin-left: 25%; 
 }
-.bothlist { /*Class that applies to all elements in section:bothlist*/
+p#introduction a:hover {
+    color: var(--oc_link_hover_color);
+    font-size: 150%;
+}
+section.bothlist { /*Class that applies to all elements in section:bothlist*/
     display: grid; /*Created the two columns of the two list*/
     grid-template-columns: auto auto; /*Two equal columns*/
-    gap: px; /*Space between columns */
-    justify-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 1em; /*Space between columns */
+    justify-items:center;
+    margin-top: 1em;
+    margin-bottom: 1em;
     margin-right: 25%;
     margin-left: 25%;
 }
 .bothlist ul { /*Class that affects the ul's in the section:bothlist*/
-    text-align:left;
-    background-color:#FF000080;
-    border-radius: 25px;
-    border: 5px solid #ddd;
+    background-color: var(--text_background_color);
+    border: .25em solid var(--border_color);
+    border-radius: 1em;
 }
 .bothlist li {
-    padding: 10px;
+    text-align: left;
     margin: 0 auto;
+    line-height: 1em;
+    padding: 1em 1em .75em;
 }
 img{ /*Border around all images*/
+    border: .25em solid var(--border_color);
+    border-radius: 1em;
+    margin: 0 auto;
     width: 20%;
     height: 20%;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    padding: 5px;
 }
 /**/
