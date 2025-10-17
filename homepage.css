@@ -1,31 +1,31 @@
-:root {
+:root { /*Custom Properties :root Pseudo-class Selector*/
     --text_background_color: rgba(255, 0, 0, 0.4);
     --border_color: rgb(221, 221, 221);
     --link_color: rgb(94, 131, 252);
     --link_hover_color: rgb(122, 21, 216);
     --oc_link_hover_color: rgb(25, 163, 13);
 }
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* { /*Universal Selector*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*Font that will apply if nothing is specified for the element*/
     text-align: center; /*text in the body will be centered*/
 }
-h1, h2{
+h1, h2{ /*Combination Selector (Multiple Selector)*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
     text-shadow: .1em .01em .1em var(--text_background_color);
 }
-a {
+a[href] { /*Attribute Selector, Style any <a> tag with the href attribute*/
     color: var(--link_color);
 }
-a:hover {
+a[href]:hover { /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
     color: var(--link_hover_color);
     font-size: 150%;
 }
-main>p { 
+main p { /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
     text-align: left;
     text-indent: 2em;
-    line-height: 1.5em;
+    line-height: 2em;
     /*The border and color that will go around all <p> elements*/
     background-color: var(--text_background_color);
     border-radius: 1em;
@@ -36,36 +36,48 @@ main>p {
     margin-right: 25%;
     margin-left: 25%; 
 }
-p#introduction a:hover {
+#introduction a:hover { /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
     color: var(--oc_link_hover_color);
     font-size: 150%;
 }
-section.bothlist { /*Class that applies to all elements in section:bothlist*/
+section.bothlist { /*A Combination Selector for a Class within an element, Styles all elements in section:bothlist*/
     display: grid; /*Created the two columns of the two list*/
     grid-template-columns: auto auto; /*Two equal columns*/
     gap: 1em; /*Space between columns */
-    justify-items:center;
+    justify-items:center; /*Makes the border background fit the text*/
     margin-top: 1em;
     margin-bottom: 1em;
     margin-right: 25%;
     margin-left: 25%;
 }
-.bothlist ul { /*Class that affects the ul's in the section:bothlist*/
+section ul { /*Descendant Selector, Styles <ul> tags that are descendant of the <section> tag*/
     background-color: var(--text_background_color);
     border: .25em solid var(--border_color);
     border-radius: 1em;
 }
-.bothlist li {
+.bothlist li { /*Class Selector with a Descendant Selector, Styles the <li> tags that are descendant of the Class ".bothlist"*/
     text-align: left;
     margin: 0 auto;
     line-height: 1em;
     padding: 1em 1em .75em;
 }
-img{ /*Border around all images*/
+img{ /*Type Selector, Styles all image tags*/
     border: .25em solid var(--border_color);
     border-radius: 1em;
     margin: 0 auto;
     width: 20%;
     height: 20%;
+}
+img+h2 {
+    text-align: left;
+}
+#benji {
+    float: left;
+    margin-left: 25%;
+}
+
+#bubbles {
+    float: left;
+    margin-left: 25%;
 }
 /**/
