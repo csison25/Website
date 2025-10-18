@@ -68,16 +68,35 @@ img{ /*Type Selector, Styles all image tags*/
     width: 20%;
     height: 20%;
 }
-img+h2 {
-    text-align: left;
-}
-#benji {
+/* Following CSS are for the Section: doggos*/
+/*All tags here are in <div> with ID:benji*/
+div#benji>img {
     float: left;
     margin-left: 25%;
 }
-
-#bubbles {
+div#benji>h2 {
+    padding-top: 1%;
+}
+div#benji>p {
+    margin-left: 47% ;
+    align-content: center;
+    text-indent: 0;
+}
+/*All tags here are in <div> with ID:bubbles*/
+div#bubbles>h2 {
+    clear: left;
+    padding-top: 1%;
+}
+div#bubbles>img {
     float: left;
     margin-left: 25%;
+}
+div#bubbles>p {
+    margin-left: 47% ;
+    align-content: center;
+    text-indent: 0;
+}
+footer {
+    clear: left;
 }
 /**/
