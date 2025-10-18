@@ -61,7 +61,7 @@ section ul { /*Descendant Selector, Styles <ul> tags that are descendant of the 
     line-height: 1em;
     padding: 1em 1em .75em;
 }
-img{ /*Type Selector, Styles all image tags*/
+img{ /*Type Selector, Styles all <img> tags*/
     border: .25em solid var(--border_color);
     border-radius: 1em;
     margin: 0 auto;
@@ -70,33 +70,33 @@ img{ /*Type Selector, Styles all image tags*/
 }
 /* Following CSS are for the Section: doggos*/
 /*All tags here are in <div> with ID:benji*/
-div#benji>img {
+div#benji>img { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:benji*/
     float: left;
     margin-left: 25%;
 }
-div#benji>h2 {
+div#benji>h2 {  /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:benji*/
     padding-top: 1%;
 }
-div#benji>p {
+div#benji>p { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:benji*/
     margin-left: 47% ;
     align-content: center;
     text-indent: 0;
 }
 /*All tags here are in <div> with ID:bubbles*/
-div#bubbles>h2 {
+div#bubbles>h2 { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
     clear: left;
     padding-top: 1%;
 }
-div#bubbles>img {
+div#bubbles>img { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:bubbles*/
     float: left;
     margin-left: 25%;
 }
-div#bubbles>p {
+div#bubbles>p { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:bubbles*/
     margin-left: 47% ;
     align-content: center;
     text-indent: 0;
 }
-footer {
+footer { /*Type Selector, Styles the <footer> tag*/
     clear: left;
 }
 /**/
