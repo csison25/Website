@@ -1,9 +1,11 @@
 :root { /*Custom Properties :root Pseudo-class Selector*/
-    --text_background_color: rgba(255, 0, 0, 0.4);
+    --text_background_color: rgb(255, 124, 124);
+    --header_shadow_color: rgba(39, 39, 197, 0.778);
     --border_color: rgb(221, 221, 221);
     --link_color: rgb(94, 131, 252);
     --link_hover_color: rgb(122, 21, 216);
     --oc_link_hover_color: rgb(25, 163, 13);
+    --body_bg_color: rgba(97, 118, 255, 0.57);
 }
 * { /*Universal Selector*/
     font-family: Verdana, Geneva, Tahoma, sans-serif; /*Font that will apply if nothing is specified for the element*/
@@ -13,7 +15,7 @@ h1, h2{ /*Combination Selector (Multiple Selector)*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
-    text-shadow: .1em .01em .1em var(--text_background_color);
+    text-shadow: .1em .01em .1em var(--header_shadow_color);
 }
 a[href] { /*Attribute Selector, Style any <a> tag with the href attribute*/
     color: var(--link_color);
@@ -21,6 +23,13 @@ a[href] { /*Attribute Selector, Style any <a> tag with the href attribute*/
 a[href]:hover { /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
     color: var(--link_hover_color);
     font-size: 150%;
+}
+#introduction a:hover { /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
+    color: var(--oc_link_hover_color);
+    font-size: 150%;
+}
+body {
+    background: var(--body_bg_color) url("../Pictures/sad_hamster.png");
 }
 main p { /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
     text-align: left;
@@ -36,11 +45,7 @@ main p { /*Descendant Relational Selector, Styles <p> tags that are descendant o
     margin-right: 25%;
     margin-left: 25%; 
 }
-#introduction a:hover { /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
-    color: var(--oc_link_hover_color);
-    font-size: 150%;
-}
-section.bothlist { /*A Combination Selector for a Class within an element, Styles all elements in section:bothlist*/
+.bothlist { /*A Class Selector, Styles all elements in section:bothlist*/
     display: grid; /*Created the two columns of the two list*/
     grid-template-columns: auto auto; /*Two equal columns*/
     gap: 1em; /*Space between columns */
@@ -68,8 +73,11 @@ img{ /*Type Selector, Styles all <img> tags*/
     width: 20%;
     height: 20%;
 }
+
 /* Following CSS are for the Section: doggos*/
+
 /*All tags here are in <div> with ID:benji*/
+
 div#benji>img { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:benji*/
     float: left;
     margin-left: 25%;
@@ -82,7 +90,9 @@ div#benji>p { /*A Combination Selector for an ID within an element and a Child R
     align-content: center;
     text-indent: 0;
 }
+
 /*All tags here are in <div> with ID:bubbles*/
+
 div#bubbles>h2 { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
     clear: left;
     padding-top: 1%;
