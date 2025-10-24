@@ -92,7 +92,6 @@ header {
     var(--rgradient) 20%, var(--rgradient) 25%, 
     var(--wgradient) 40%, var(--wgradient) 50%,
     var(--rgradient) 60%, var(--rgradient) 100%);
-    padding-bottom: em;
     max-height: 20em;
     border: 1em solid;
 }
