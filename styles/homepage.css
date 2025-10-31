@@ -1,37 +1,69 @@
-:root { /*Custom Properties :root Pseudo-class Selector*/
+:root {
+    /*Custom Properties :root Pseudo-class Selector*/
     --text_background_color: rgb(255, 124, 124);
-    --header_shadow_color: rgba(39, 39, 197, 0.778);
-    --border_color: rgb(221, 221, 221);
+    --border_color: rgb(79, 50, 96);
     --link_color: rgb(94, 131, 252);
     --link_hover_color: rgb(122, 21, 216);
-    --oc_link_hover_color: rgb(25, 163, 13);
-    --body_bg_color: rgba(97, 118, 255, 0.57);
+    --oc_link_hover_color: rgb(149, 0, 0);
+    --body_bg_color: rgba(184, 186, 197, 0.57);
+    --backgroundcolor: rgb(255, 255, 255);
+    --nav_hover_color: rgb(255, 168, 168);
+    --nav_text_color: rgb(255, 255, 255);
 }
-* { /*Universal Selector*/
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /*Font that will apply if nothing is specified for the element*/
-    text-align: center; /*text in the body will be centered*/
+
+* {
+    /*Universal Selector*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*Font that will apply if nothing is specified for the element*/
+    /*text in the body will be centered*/
 }
-h1, h2{ /*Combination Selector (Multiple Selector)*/
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-variant: small-caps;
-    text-shadow: .1em .01em .1em var(--header_shadow_color);
-}
-a[href] { /*Attribute Selector, Style any <a> tag with the href attribute*/
+
+a[href] {
+    /*Attribute Selector, Style any <a> tag with the href attribute*/
     color: var(--link_color);
 }
-a[href]:hover { /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
+
+a[href]:hover {
+    /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
     color: var(--link_hover_color);
     font-size: 150%;
 }
-#introduction a:hover { /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
+
+#introduction a:hover {
+    /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
     color: var(--oc_link_hover_color);
-    font-size: 150%;
+    font-size: 125%;
 }
+
 body {
-    background: var(--body_bg_color) url("../Pictures/sad_hamster.png");
+    background: radial-gradient(circle, transparent 5%, var(--backgroundcolor) 10%, var(--backgroundcolor) 90%, transparent 90%, transparent), radial-gradient(circle, transparent 10%, var(--backgroundcolor) 10%, var(--backgroundcolor) 80%, transparent 80%, transparent) 40px 40px, linear-gradient(var(--body_bg_color) 3.2px, transparent 3.2px) 0 -1.6px, linear-gradient(90deg, var(--body_bg_color) 3.2px, var(--backgroundcolor) 3.2px) -1.6px 0;
+    background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
+    background-attachment: fixed;
 }
-main p { /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
+
+h1,
+h2 {
+    /*Combination Selector (Multiple Selector)*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    clear: both;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+#me {
+    float: left;
+    margin-right: 0.25em;
+    margin-left: 20%;
+
+}
+
+main p {
+    /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
     text-align: left;
     text-indent: 2em;
     line-height: 2em;
@@ -40,73 +72,272 @@ main p { /*Descendant Relational Selector, Styles <p> tags that are descendant o
     border-radius: 1em;
     border: .25em solid var(--border_color);
     padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-right: 25%;
-    margin-left: 25%; 
+    margin: 1em 20% 1em 20%;
+    overflow: hidden;
 }
-.bothlist { /*A Class Selector, Styles all elements in section:bothlist*/
-    display: grid; /*Created the two columns of the two list*/
-    grid-template-columns: auto auto; /*Two equal columns*/
-    gap: 1em; /*Space between columns */
-    justify-items:center; /*Makes the border background fit the text*/
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-right: 25%;
-    margin-left: 25%;
+
+.bothlist {
+    /*A Class Selector, Styles all elements in section:bothlist*/
+    display: grid;
+    /*Created the two columns of the two list*/
+    grid-template-columns: auto auto;
+    /*Two equal columns*/
+    justify-items: center;
+    /*Makes the border background fit the text*/
+    margin: auto 15% auto 15%;
+    clear: both;
 }
-section ul { /*Descendant Selector, Styles <ul> tags that are descendant of the <section> tag*/
+
+section ul {
+    /*Descendant Selector, Styles <ul> tags that are descendant of the <section> tag*/
     background-color: var(--text_background_color);
     border: .25em solid var(--border_color);
     border-radius: 1em;
 }
-.bothlist li { /*Class Selector with a Descendant Selector, Styles the <li> tags that are descendant of the Class ".bothlist"*/
+
+.bothlist li {
+    /*Class Selector with a Descendant Selector, Styles the <li> tags that are descendant of the Class ".bothlist"*/
     text-align: left;
     margin: 0 auto;
     line-height: 1em;
     padding: 1em 1em .75em;
+
 }
-img{ /*Type Selector, Styles all <img> tags*/
+
+img {
+    /*Type Selector, Styles all <img> tags*/
     border: .25em solid var(--border_color);
     border-radius: 1em;
     margin: 0 auto;
-    width: 20%;
-    height: 20%;
+    width: 12%;
+    height: 12%;
+    min-width: 280px;
 }
 
-/* Following CSS are for the Section: doggos*/
+/*** Following CSS are for the Section: doggos ***/
 
-/*All tags here are in <div> with ID:benji*/
+/*****************
+    All tags below 
+    are in <div> 
+    with ID:benji
+*****************/
 
-div#benji>img { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:benji*/
+div#benji>img {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:benji*/
     float: left;
-    margin-left: 25%;
+    margin-left: 20%;
+    margin-right: 0.25em;
 }
-div#benji>h2 {  /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:benji*/
+
+div#benji>h2 {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:benji*/
     padding-top: 1%;
 }
-div#benji>p { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:benji*/
-    margin-left: 47% ;
+
+div#benji>p {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:benji*/
+    margin-left: 47%;
     align-content: center;
     text-indent: 0;
 }
 
-/*All tags here are in <div> with ID:bubbles*/
+/*****************
+    All tags below 
+    are in <div> 
+    with ID:bubbles
+*****************/
 
-div#bubbles>h2 { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
+div#bubbles>h2 {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
     clear: left;
     padding-top: 1%;
 }
-div#bubbles>img { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:bubbles*/
+
+div#bubbles>img {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:bubbles*/
     float: left;
-    margin-left: 25%;
+    margin-left: 20%;
+    margin-right: 0.25em;
 }
-div#bubbles>p { /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:bubbles*/
-    margin-left: 47% ;
+
+div#bubbles>p {
+    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:bubbles*/
+    margin-left: 47%;
     align-content: center;
     text-indent: 0;
 }
-footer { /*Type Selector, Styles the <footer> tag*/
+
+footer {
+    /*Type Selector, Styles the <footer> tag*/
+    clear: left;
+    text-align: center;
+}
+
+/*****************
+    nav_menu CSS
+*****************/
+
+#nav_menu {
+    padding-bottom: 3em;
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 24.5%;
+    padding: 0;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--text_background_color);
+    color: var(--nav_text_color);
+    font-weight: bold;
+    border-right: 2px solid var(--border_color);
+}
+
+/* HOW TO MAKE THE MENUS FLOAT ON HOVER */
+#nav_menu ul li a:hover {
+    background-color: var(--nav_hover_color);
+
+}
+
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}
+
+#nav_menu ul li a.current {
+    /* Need to set the class current to the menu slots you want for this to work  */
+    color: yellow;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+main {
     clear: left;
 }
-/**/
+
+/***************** *****************/
+
+@media only screen and (max-width: 1200px) {
+    main p {
+        margin: 1em 5% 0 5%;
+    }
+
+    #introduction {
+        clear: left;
+
+    }
+
+    #me {
+        float: none;
+        display: block;
+        width: 25%;
+        margin: auto;
+    }
+
+    h1 {
+        margin: 0 0 0.5em 0;
+    }
+
+    div#benji>img {
+        margin-left: 10%;
+    }
+
+    div#bubbles>img {
+        margin-left: 10%;
+    }
+
+    div#benji>p {
+        margin-left: 37%;
+    }
+
+    div#bubbles>p {
+        margin-left: 37%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    div#benji>img {
+        float: none;
+        display: block;
+        width: 20%;
+        margin: auto;
+    }
+
+    div#bubbles>img {
+        float: none;
+        display: block;
+        width: 25%;
+        margin: auto;
+    }
+
+    div#benji>p {
+        margin-left: 5%;
+    }
+
+    div#bubbles>p {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    #nav_menu {
+        padding-bottom: 0em;
+
+    }
+
+    #nav_menu ul li {
+        float: none;
+        width: 94%;
+    }
+
+    #nav_menu ul li a {
+        border-right: none;
+    }
+
+    .bothlist {
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    #nav_menu ul li a {
+        border-bottom: 2px solid rgb(189, 19, 19);
+    }
+
+    #nav_menu ul li a.lastitem {
+        border-bottom: none;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #mobile_menu {
+        display: block;
+    }
+
+    .slicknav_menu {
+        background-color: #800000
+            /* Can put, !important HERE if you want */
+        ;
+    }
+}
