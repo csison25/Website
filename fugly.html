@@ -4,11 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" This is a Website made by Cj Sison, a student of Olympic College.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
     <link rel="stylesheet" href="styles/fugly.css">
+    <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
+        }); </script>
     <title>FuGlY</title>
 </head>
 
 <body>
+    <nav id="mobile_menu">
+
+    </nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="pingpong.html">Ping Pong</a></li>
+            <li><a href="herpteculture.html">Herpteculture</a></li>
+            <li><a href="fugly.html">FuGlY Webpage</a></li>
+            <li><a href="finalproject.html" class="lastitem">Final Project</a></li>
+        </ul>
+    </nav>
     <header>
         <img id="bow" src="pictures/fpictures/sad_hamster_with_bow.png"
             alt="Picture of a hamster with a bow"><!--hamster meme with bow-->

@@ -1,9 +1,10 @@
-:root {/*Colors for the webpage*/
+:root {
+    /*Colors for the webpage*/
     --title: rgb(111, 0, 255);
     /*colors for gradient*/
-    --rgradient:rgba(255, 0, 0, 0.596);
-    --wgradient:rgb(255, 255, 255);
-    --pgradient:rgb(85, 7, 85);
+    --rgradient: rgba(255, 0, 0, 0.596);
+    --wgradient: rgb(255, 255, 255);
+    --pgradient: rgb(85, 7, 85);
     --bgradient: rgb(34, 67, 255);
     /*colors for sukuna*/
     --fonth2sukuna: rgb(255, 76, 183);
@@ -12,7 +13,7 @@
     --ulcolor: rgb(143, 240, 203);
     --black: rgb(0, 0, 0);
     --textpshdw: rgb(217, 255, 0);
-    --sukunah4team:rgb(111, 0, 255);
+    --sukunah4team: rgb(111, 0, 255);
     /*colors for gojo*/
     --fonth3gojo: rgb(119, 20, 181);
     --fonth2gojo: rgba(97, 97, 255, 0.342);
@@ -26,40 +27,53 @@
     /*colors for legday*/
     --legdaybg: rgba(255, 162, 0, 0.805);
     --legdaybrd: rgb(241, 93, 214);
-    --fonth4legday: rgb(255, 253, 134); 
+    --fonth4legday: rgb(255, 253, 134);
     --fontplegday: rgb(164, 231, 64);
     /*colors for article*/
     --fonth2eepies: rgb(255, 107, 255);
     --articlebg: rgb(166, 166, 255);
     --articlecolor: rgb(183, 211, 128);
+    /*nav_menu colors*/
+    --text_background_color: rgb(255, 124, 124);
+    --backgroundcolor: rgb(255, 255, 255);
+    --nav_hover_color: rgb(255, 168, 168);
+    --nav_text_color: rgb(255, 255, 255);
 }
+
 * {
     margin: 0 auto;
 }
+
 /****************
     Styling for <a> 
 *****************/
 a[href]:hover {
-    color:rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
 }
+
 a[ref]:visited {
-    color:rgb(165, 42, 42);
+    color: rgb(165, 42, 42);
 }
+
 /****************
     Classes used everywhere 
 *****************/
 .floatleft {
-    float:left;
+    float: left;
 }
+
 .floatright {
-    float:right;
+    float: right;
 }
+
 .textleft {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .black {
     color: var(--black);
 }
+
 /****************
     Header 
 *****************/
@@ -69,91 +83,107 @@ header {
     padding-bottom: 3em;
     border: 2em dotted var(--title);
 }
-#bow {/*Left-side hamster img*/
+
+#bow {
+    /*Left-side hamster img*/
     float: left;
     width: 5em;
 }
-#ham {/*Right-side hamster img*/
+
+#ham {
+    /*Right-side hamster img*/
     float: right;
     width: 5em;
 }
-#title {/*h1 for the webpage*/
+
+#title {
+    /*h1 for the webpage*/
     text-align: center;
     color: var(--title);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration:line-through;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: line-through;
 }
+
 /****************
     Pokemonmaster Section
 *****************/
 #pokemonmaster {
-    background-image: 
-    linear-gradient(161deg, 
-    var(--rgradient) 20%, var(--rgradient) 25%, 
-    var(--wgradient) 40%, var(--wgradient) 50%,
-    var(--rgradient) 60%, var(--rgradient) 100%);
+    background-image:
+        linear-gradient(161deg,
+            var(--rgradient) 20%, var(--rgradient) 25%,
+            var(--wgradient) 40%, var(--wgradient) 50%,
+            var(--rgradient) 60%, var(--rgradient) 100%);
     max-height: 20em;
     border: 1em solid;
 }
+
 #pokemonmaster>h2 {
     margin-top: 0;
     color: var(--fonth2sukuna);
 }
+
 #pokemonmaster>p {
     color: var(--fontpsukuna);
-    font-size:x-large;
+    font-size: x-large;
     text-shadow: .1em .1em var(--textpshdw);
 }
+
 #pokemonmaster>h4 {
     color: var(--fonth4sukuna);
     text-shadow: .1em .1em var(--sukunah4team);
 }
+
 #pokemonmaster>ul {
     color: var(--ulcolor);
     text-align: left;
     padding-bottom: 5em;
     column-count: 2;
-    font-size: larger ;
+    font-size: larger;
     background: url("../pictures/fpictures/listbackground.png");
     background-size: 25;
-    
+
 }
+
 /****************
     Aside Styling
 *****************/
 aside {
     margin: 0;
     padding: 2em 1em 2em 1em;
-    width:20%;
-    max-height:max-content;
+    width: 20%;
+    max-height: max-content;
     border-style: ridge none ridge ridge;
     border-width: 1em;
     background-image:
-        linear-gradient(90deg, 
-    var(--pgradient) 20%, var(--pgradient) 25%, 
-    var(--wgradient) 40%, var(--wgradient) 50%,
-    var(--pgradient) 60%, var(--pgradient) 100%); 
+        linear-gradient(90deg,
+            var(--pgradient) 20%, var(--pgradient) 25%,
+            var(--wgradient) 40%, var(--wgradient) 50%,
+            var(--pgradient) 60%, var(--pgradient) 100%);
 }
+
 aside>img {
     width: 100%;
 }
+
 /****************
     Goat-jo Section
 *****************/
 #goatjo>h2 {
-    clear:left;
+    clear: left;
     color: var(--fonth2gojo);
 }
+
 #goatjo {
     background-image:
-        linear-gradient(21deg, 
-    var(--rgradient) 5%, var(--pgradient) 25%, 
-    var(--wgradient) 40%, var(--wgradient) 50%,
-    var(--pgradient) 60%, var(--bgradient) 100%);
+        linear-gradient(21deg,
+            var(--rgradient) 5%, var(--pgradient) 25%,
+            var(--wgradient) 40%, var(--wgradient) 50%,
+            var(--pgradient) 60%, var(--bgradient) 100%);
     height: 300px;
     border-left: 1em solid var(--fonth3gojo);
     border-bottom: 1em solid var(--fonth3gojo);
 }
+
 #goatjo>p {
     background: url("../pictures/fpictures/gojo_p_background.png");
     margin-left: 10%;
@@ -166,49 +196,64 @@ aside>img {
     color: var(--fontpgojo);
     background-position: 1% 50%;
 }
+
 #strongest {
     max-width: 250px;
 }
+
 /****************
     Tech Section
 *****************/
 #techadvice {
     background: url("../pictures/fpictures/html_background.png");
-    background-size: 80em; 
+    background-size: 80em;
     padding-bottom: 1em;
     height: 500px;
 }
+
 #techadvice>h3 {
     clear: left;
     color: var(--fonth3tech);
 }
+
 .tech {
     max-width: 300px;
     margin-left: 5em;
 }
+
 #techadvice>p {
     color: var(--fontptech);
 }
+
 div>h2 {
     color: var(--fonth2homedepot);
 }
-#homedepot {/*img*/
+
+#homedepot {
+    /*img*/
     border: 1em ridge var(--fonth2homedepot);
 }
+
 div>h5 {
     color: var(--fonth5mcdonalds);
 }
-#ron {/*img*/
+
+#ron {
+    /*img*/
     border: 1em groove var(--fonth5mcdonalds);
     margin-top: 1.55em;
 }
+
 div>h4 {
     color: var(--fonth3bestbuy);
 }
-#bestbuy {/*img*/
+
+#bestbuy {
+    /*img*/
     border: 1em double var(--fonth3bestbuy);
-    margin-top: .6em; 
+    margin-top: .6em;
 }
+
 /****************
     Legday Section
 *****************/
@@ -218,10 +263,13 @@ div>h4 {
     border: 2em dotted var(--legdaybrd);
     margin-right: 22.4%;
 }
-#spongebob {/*img*/
+
+#spongebob {
+    /*img*/
     max-width: 10em;
     padding: .5em;
 }
+
 #legday>p {
     padding-left: 1em;
     font-family: fantasy;
@@ -231,13 +279,18 @@ div>h4 {
     color: var(--fontplegday);
 
 }
-p>img {/*Affects the images in the <p> tag*/
+
+p>img {
+    /*Affects the images in the <p> tag*/
     max-width: 3em;
 }
-#legday>h4 {/*article header*/
+
+#legday>h4 {
+    /*article header*/
     clear: left;
     color: var(--fonth4legday)
 }
+
 article {
     column-count: 3;
     column-gap: 1em;
@@ -245,9 +298,11 @@ article {
     color: var(--articlecolor);
     background: var(--articlebg);
 }
+
 article>h2 {
     color: var(--fonth2eepies);
 }
+
 /****************
     Footer
 *****************/
@@ -258,9 +313,117 @@ footer {
     height: 20em;
     padding-top: 2em;
 }
+
 #grave {
     text-align: center;
-    font-size:x-large;
+    font-size: x-large;
     padding-top: 4em;
 }
+
+/*****************
+    nav_menu CSS
+*****************/
+
+#nav_menu {
+    padding-bottom: 3em;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--text_background_color);
+    color: var(--nav_text_color);
+    font-weight: bold;
+    border-right: 2px solid var(--border_color);
+
+}
+
+/* HOW TO MAKE THE MENUS FLOAT ON HOVER */
+#nav_menu ul li a:hover {
+    background-color: var(--nav_hover_color);
+
+}
+
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}
+
+#nav_menu ul li a.current {
+    /* Need to set the class current to the menu slots you want for this to work  */
+    color: yellow;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+main {
+    clear: left;
+}
+
+@media only screen and (max-width: 675px) {
+    #nav_menu {
+        padding-bottom: 0em;
+
+    }
+
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+    }
+
+    #nav_menu ul li a {
+        border-right: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    #nav_menu ul li a {
+        border-bottom: 2px solid rgb(189, 19, 19);
+    }
+
+    #nav_menu ul li a.lastitem {
+        border-bottom: none;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #mobile_menu {
+        display: block;
+    }
+
+    .slicknav_menu {
+        background-color: #d67e7e
+            /* Can put, !important HERE if you want */
+        ;
+    }
+}
+
 /**/
