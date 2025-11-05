@@ -1,0 +1,191 @@
+:root {
+    /*Custom Properties :root Pseudo-class Selector*/
+    --text_background_color: rgb(255, 124, 124);
+    --border_color: rgb(79, 50, 96);
+    --link_color: rgb(94, 131, 252);
+    --link_hover_color: rgb(122, 21, 216);
+    --oc_link_hover_color: rgb(149, 0, 0);
+    --body_bg_color: rgba(184, 186, 197, 0.57);
+    --backgroundcolor: rgb(255, 255, 255);
+    --nav_hover_color: rgb(255, 168, 168);
+    --nav_text_color: rgb(255, 255, 255);
+}
+* {
+    /*Universal Selector*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*Font that will apply if nothing is specified for the element*/
+    /*text in the body will be centered*/
+    margin: 0;
+    padding: 0; 
+}
+a[href] {
+    /*Attribute Selector, Style any <a> tag with the href attribute*/
+    color: var(--link_color);
+}
+
+a[href]:hover {
+    /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
+    color: var(--link_hover_color);
+
+}
+img{
+    border: .25em solid var(--border_color);
+    border-radius: 1em;
+    margin: 0 auto;
+}
+body {
+    background: radial-gradient(circle, transparent 5%, var(--backgroundcolor) 10%, var(--backgroundcolor) 90%, transparent 90%, transparent), radial-gradient(circle, transparent 10%, var(--backgroundcolor) 10%, var(--backgroundcolor) 80%, transparent 80%, transparent) 40px 40px, linear-gradient(var(--body_bg_color) 3.2px, transparent 3.2px) 0 -1.6px, linear-gradient(90deg, var(--body_bg_color) 3.2px, var(--backgroundcolor) 3.2px) -1.6px 0;
+    background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
+    background-attachment: fixed;
+}
+h1,
+h2,h3 {
+    /*Combination Selector (Multiple Selector)*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    clear: both;
+    text-align: center;
+}
+main p {
+    /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
+    text-align: left;
+    text-indent: 2em;
+    line-height: 2.5em;
+    /*The border and color that will go around all <p> elements*/
+    background-color: var(--text_background_color);
+    border-radius: 1em;
+    border: .25em solid var(--border_color);
+    padding: 1em;
+    margin: 0 20% 2em 20%;
+}
+footer {
+    /*Type Selector, Styles the <footer> tag*/
+    background-color: black;
+    color: white;
+    padding: 1.25em;
+    clear: left;
+    text-align: center;
+}
+/*****************
+    google fonts
+*****************/
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sour-gummy-font {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.gabarito-font {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/*****************
+    nav_menu CSS
+*****************/
+#nav_menu {
+    padding-bottom: 3em;
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 25%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--text_background_color);
+    color: var(--nav_text_color);
+    font-weight: bold;
+    border-right: 2px solid var(--border_color);
+}
+
+/* HOW TO MAKE THE MENUS FLOAT ON HOVER */
+#nav_menu ul li a:hover {
+    background-color: var(--nav_hover_color);
+}
+
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}
+
+#nav_menu ul li a.current {
+    /* Need to set the class current to the menu slots you want for this to work  */
+    background-color: var(--nav_hover_color);
+}
+
+#mobile_menu {
+    display: none;
+}
+
+main {
+    clear: left;
+}
+
+@media only screen and (max-width: 770px) {
+    #nav_menu {
+        padding-bottom: 0em;
+
+    }
+
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+    }
+
+    #nav_menu ul li a {
+        border-right: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    #nav_menu ul li a {
+        border-bottom: 2px solid rgb(189, 19, 19);
+    }
+
+    #nav_menu ul li a.lastitem {
+        border-bottom: none;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #mobile_menu {
+        display: block;
+    }
+
+    .slicknav_menu {
+        background-color: #d67e7e;
+            /* Can put, !important HERE if you want */
+        
+    }
+}
