@@ -26,7 +26,7 @@ a[href] {
 a[href]:hover {
     /*Attribute Selector with a Pseudo-element(:hover), Style the hover action of any <a> tag*/
     color: var(--link_hover_color);
-    font-size: 150%;
+
 }
 
 #introduction a:hover {
@@ -39,6 +39,9 @@ body {
     background: radial-gradient(circle, transparent 5%, var(--backgroundcolor) 10%, var(--backgroundcolor) 90%, transparent 90%, transparent), radial-gradient(circle, transparent 10%, var(--backgroundcolor) 10%, var(--backgroundcolor) 80%, transparent 80%, transparent) 40px 40px, linear-gradient(var(--body_bg_color) 3.2px, transparent 3.2px) 0 -1.6px, linear-gradient(90deg, var(--body_bg_color) 3.2px, var(--backgroundcolor) 3.2px) -1.6px 0;
     background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+
 }
 
 h1,
@@ -52,7 +55,7 @@ h2 {
 }
 
 h2 {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 #me {
@@ -112,6 +115,18 @@ img {
     width: 12%;
     height: 12%;
     min-width: 280px;
+}
+
+/*** Following CSS are for the Section: Jump To: ***/
+
+#jump {
+    margin-top: 0.5em;
+}
+#placeholder {
+    float: left;
+    text-align: center;
+    margin: auto 40% auto 40%;
+    text-indent: 0;
 }
 
 /*** Following CSS are for the Section: doggos ***/
@@ -181,16 +196,21 @@ footer {
     padding-bottom: 3em;
     margin: auto;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 #nav_menu ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #nav_menu ul li {
     float: left;
-    width: 24.5%;
+    width: 25%;
     padding: 0;
+    margin: 0;
 }
 
 #nav_menu ul li a {
@@ -202,6 +222,7 @@ footer {
     color: var(--nav_text_color);
     font-weight: bold;
     border-right: 2px solid var(--border_color);
+
 }
 
 /* HOW TO MAKE THE MENUS FLOAT ON HOVER */
@@ -299,7 +320,7 @@ main {
 
     #nav_menu ul li {
         float: none;
-        width: 94%;
+        width: 100%;
     }
 
     #nav_menu ul li a {
@@ -336,7 +357,7 @@ main {
     }
 
     .slicknav_menu {
-        background-color: #800000
+        background-color: #d67e7e
             /* Can put, !important HERE if you want */
         ;
     }
