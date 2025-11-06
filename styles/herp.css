@@ -1,0 +1,30 @@
+main p{
+    all: revert;
+    margin: auto;
+    text-indent: 2em;
+    line-height: 2em;
+    font-size: large;
+}
+img {
+    all: revert;
+}
+.picinborder {
+    background-color: var(--text_background_color);
+    border-radius: 1em;
+    padding: 1em;
+    border: .25em solid var(--border_color);
+    overflow: hidden;
+    margin: 0 5% 0 5%;
+}
+#geckobins, #twogeckosarm {
+    margin-right: 1em;
+    box-shadow: -0.1em -0.1em 0.5em blue, 0.1em 0.1em 0.5em red;
+    margin-bottom: 0.5em;
+}
+figure {
+    float: left;
+}
+figcaption {
+    font-style: italic;
+    font-size:small;
+}
