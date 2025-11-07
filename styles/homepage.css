@@ -86,6 +86,8 @@ div#benji>img {
 div#benji>h3 {
     /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:benji*/
     padding-top: 1%;
+    text-align: left;
+    margin-left: 47%;
 }
 
 div#benji>p {
@@ -105,6 +107,9 @@ div#bubbles>h3 {
     /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
     clear: left;
     padding-top: 1%;
+    text-align: left;
+    margin-left: 47%;
+    
 }
 
 div#bubbles>img {
@@ -166,12 +171,13 @@ Media Queries Start Here
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 810px) {
     div#benji>img {
         float: none;
         display: block;
         width: 20%;
         margin: auto;
+        margin-bottom: 1em;
     }
 
     div#bubbles>img {
@@ -179,6 +185,7 @@ Media Queries Start Here
         display: block;
         width: 25%;
         margin: auto;
+        margin-bottom: 1em;
     }
 
     div#benji>p {
@@ -188,6 +195,15 @@ Media Queries Start Here
     div#bubbles>p {
         margin-left: 5%;
     }
+    div#benji>h3 {
+    text-align: center;
+    margin: auto;   
+}
+div#bubbles>h3 {
+    text-align: center;
+    margin: auto;
+    
+}
 }
 
 @media only screen and (max-width: 720px) {
