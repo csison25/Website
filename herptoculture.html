@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" This is a Website made by Cj Sison, a student of Olympic College.">
+    <!--stylesheets-->
+    <!--this one is for the slicknav-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+    <!--my stylesheets below-->
     <link rel="stylesheet" href="styles/structure.css">
     <link rel="stylesheet" href="styles/herp.css">
-    <!--googlefontsbelow-->
+    <!--favicon-->
+    <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
+    <!--fontawesome script-->
+    <script src="https://kit.fontawesome.com/0c3d26e165.js" crossorigin="anonymous"></script>
+    <!--googlefonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Oswald:wght@200..700&family=Sour+Gummy:ital@0;1&display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0c3d26e165.js" crossorigin="anonymous"></script>
-    <!--googlefontsabove-->
-    <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
+    <!--mobile nav menu scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
     <script type="text/javascript">
@@ -32,10 +37,10 @@
     </nav>
     <nav id="nav_menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pingpong.html">Ping Pong</a></li>
-            <li><a class="current" href="herptoculture.html">Herpetoculture</a></li>
-            <li><a href="finalproject.html" class="lastitem">Final Project</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Ping Pong</a></li>
+            <li><a class="current" href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herpetoculture</a></li>
+            <li><a href="finalproject.html" class="lastitem"><i class="fa-solid fa-file-code"></i>Final Project</a></li>
         </ul>
     </nav>
     <main>
@@ -43,17 +48,18 @@
             <h1>Herpetoculture</h1>
         </header>
         <h2>What is Herpetoculture?</h2>
-        <section class="picinborder">
+        <section class="picinborder"> <!-- Section about what is herpetoculture-->
             <figure>
-                <img id="geckobins" src="pictures/herppictures/herpintro.jpg"
+                <img class="geckoimgs" src="pictures/herppictures/herpintro.jpg"
                     alt="Picture of shoe bins made to house geckos.">
                 <figcaption>
                     Image of four baby Crested Geckos that I bred<br>
                     and hatched, along with their hatchling setup.
                 </figcaption>
             </figure>
-            <p id="whatishp" class="gabarito-font">
-                Herpetoculture involves keeping, breeding, and caring for reptiles and amphibians in captivity. It emphasizes providing
+            <p class="gabarito-font paragraphinborder">
+                Herpetoculture involves keeping, breeding, and caring for reptiles,amphibians and invertebrates in
+                captivity. It emphasizes providing
                 proper care by mimicking the animals' natural habitats as closely as possible. This includes offering
                 the right diet, temperature, humidity, and lighting to help the animals thrive. Herpetoculture is about
                 more than just owning these animals as pets; it's about understanding their behavior, biology, and
@@ -67,15 +73,15 @@
             </p>
         </section>
         <h2>How I got into Reptile Keeping</h2>
-        <section class="picinborder">
+        <section class="picinborder"> <!--Section about how I got into the hobby-->
             <figure>
-                <img id="twogeckosarm" src="pictures/herppictures/twogeckos.jpg" alt="Image of two geckos on an arm">
+                <img class="geckoimgs" src="pictures/herppictures/twogeckos.jpg" alt="Image of two geckos on an arm">
                 <figcaption>
                     Image of my first two Crested Geckos who are<br>
                     the parents of the geckos in the above image.<br>
                 </figcaption>
             </figure>
-            <p class="gabarito-font">
+            <p class="gabarito-font paragraphinborder">
                 I take care of a lot of animals.I grew up mainly surrounded by dogs and wanted nothing to do with other
                 types of animals; I thought they
                 were creepy and disgusting.
@@ -92,6 +98,30 @@
                 that other types animals are harmless creatures just like dogs.
             </p>
         </section>
+        <h2>My Educational Animals</h2>
+        <section class="picinborder">
+            <p class="gabarito-font paragraphinborder">
+                I define an animal as "educational" by how well it behaves and responds to people who are not the immediate keeper (me in this case). I have a variety of animals, meaning that at least one —and possibly the only —of each species is an educational animal under my care. That animal is then regularly handled and interacted with to have them more accustomed to interactions. This allows me to showcase the animal in a more controlled environment, reducing their stress and the risk of endangerment. However, this does not apply to every animal; some do not like being handled or are generally more aggressive than others.
+            </p>
+        </section>
+        <section id="smallgallery">
+            <figure>
+                <img>
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img>
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img>
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img>
+                <figcaption></figcaption>
+            </figure>
+        </section>
     </main>
     <footer>
         &copy; Copyright Cj Sison 2025
@@ -100,3 +130,4 @@
 </body>
 
 </html>
+<!---->

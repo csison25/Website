@@ -6,9 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" This is a Website made by Cj Sison, a student of Olympic College.">
+    <!--stylesheets-->
+    <!--this one is for the slicknav-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+    <!--my stylesheets below-->
     <link rel="stylesheet" href="styles/structure.css">
     <link rel="stylesheet" href="styles/homepage.css">
+    <!--favicon-->
     <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
     <!--fontawesome script-->
     <script src="https://kit.fontawesome.com/0c3d26e165.js" crossorigin="anonymous"></script>
@@ -29,54 +33,63 @@
 </head>
 
 <body>
-    <nav id="mobile_menu">
+    <nav id="mobile_menu"> <!--slicknav menu <nav> tag-->
 
     </nav>
-    <nav id="nav_menu">
+    <nav id="nav_menu"> <!--regular menu <nav> tag-->
         <ul>
             <li><a class="current" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
             <li><a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Ping Pong</a></li>
-            <li><a href="herptoculture.html"><i class="fa-solid fa-hand-lizard"></i> Herptoculture</a></li>
-            <li><a href="finalproject.html" class="lastitem"><i class="fa-solid fa-file-code"></i> Final Project</a></li>
+            <li><a href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herptoculture</a></li>
+            <li><a href="finalproject.html" class="lastitem"><i class="fa-solid fa-file-code"></i> Final Project</a>
+            </li>
         </ul>
     </nav>
     <main>
-        <header>
-            <h1>Who is This Mysterious Man?</h1>
-            <img id="me" src="pictures/profilepic.jpg" alt="Picture of the mysterious man"> <!--Picture of me-->
-        </header>
-        <p id="introduction"> <!--Introduction of myself-->
-            <strong>Hello and welcome to my webpage!</strong><br>
-            My name is Cj Sison and this webpage is about myself.
-            I am 26 years old, I live in Bremerton and graduated from Central Kitsap High School.
-            My first job was at the McDonald's in Silverdale.
-            I have been working at Mcdonald's for 10 years and was a General Manager for the last 4 years.
-            Some of you may know me or know of me as I used to run the McDonald's in Silverdale.
-            Currently I am going to <a href="https://www.olympic.edu/" target="_blank">Olympic College</a> to further my
-            education,
-            getting my Associates degree in Software Development. Growing up I loved messing with technology and
-            hope that one day I will take part in developing a video game.
-            <br>
-            <a href="#hobbiesinterest">Hobbies and Interests</a>
-            <br>
-            <a href="#theboys">My Dogs</a>
-        </p>
-        <h2>My Mindset</h2>
-        <p>
-            My mindset is focused on constant improvement and learning through a variety of hobbies. I enjoy exploring
-            different skills and interest because it challenges me to think in new ways and expand what I am capable of.
-            I am the type who can never sit still. I am always looking for something new to do or learn. I believe that
-            having hobbies gives an opportunity to grow, not just in skill but in character and
-            perspective.
-        </p>
+        <section><!--Intro-->
+            <header>
+                <h1>Who is This Mysterious Man?</h1>
+                <img id="me" src="pictures/profilepic.jpg" alt="Picture of the mysterious man"> <!--Picture of me-->
+            </header>
+            <p id="introduction">
+                <strong>Hello and welcome to my webpage!</strong><br>
+                My name is Cj Sison and this webpage is about myself.
+                I am 26 years old, I live in Bremerton and graduated from Central Kitsap High School.
+                My first job was at the McDonald's in Silverdale.
+                I have been working at Mcdonald's for 10 years and was a General Manager for the last 4 years.
+                Some of you may know me or know of me as I used to run the McDonald's in Silverdale.
+                Currently I am going to <a href="https://www.olympic.edu/" target="_blank">Olympic College</a> to
+                further my
+                education,
+                getting my Associates degree in Software Development. Growing up I loved messing with technology and
+                hope that one day I will take part in developing a video game.
+                <br>
+                <a href="#hobbiesinterest">Hobbies and Interests</a>
+                <br>
+                <a href="#theboys">My Dogs</a>
+            </p>
+        </section>
+        <section><!--Mindset for learning hobbies-->
+            <h2>My Mindset</h2>
+            <p>
+                My mindset is focused on constant improvement and learning through a variety of hobbies. I enjoy
+                exploring
+                different skills and interest because it challenges me to think in new ways and expand what I am capable
+                of.
+                I am the type who can never sit still. I am always looking for something new to do or learn. I believe
+                that
+                having hobbies gives an opportunity to grow, not just in skill but in character and
+                perspective.
+            </p>
+        </section>
         <h2 id="hobbiesinterest">Current Hobbies and Interest</h2>
         <section class="bothlist"> <!--Section about my hobbies and interests-->
             <div> <!--Unorder list for hobbies-->
                 <h3>My Hobbies:</h3>
                 <ul>
-                    <li>Ping Pong</li>
+                    <li>Ping Pong</li><!--Has a webpage-->
                     <li>Crocheting</li>
-                    <li>Herptoculture</li>
+                    <li>Herptoculture</li><!-- Has a webpage-->
                     <li>Strength training</li>
                     <li>Playing video games</li>
                 </ul>
@@ -87,11 +100,11 @@
                     <li><a href="https://www.twitch.tv/chezsus" target="_blank">Streaming</a></li>
                     <!--Link to my twitch-->
                     <li>Travelling</li>
-                    <li>Pokemon VGC</li>
+                    <li>Pokemon VGC</li> <!--final project-->
                 </ul>
             </div>
         </section>
-        <section>
+        <section> <!--about ping pong-->
             <h3>Ping Pong</h3>
             <p>
                 I've been playing ping pong since I was in high school. After school, my brother and I would go to the
@@ -102,9 +115,9 @@
 
             </p>
         </section>
-        <section> <!--Section about my owning animals-->
+        <section> <!--Section about owning animals-->
             <h3>Animal Educator</h3>
-            <p> <!--Paragraph about animal keeping-->
+            <p>
                 Currently, I have <strong>17 crested geckos, nine tarantulas, two dogs,
                     a bearded dragon, and a leachianus gecko.</strong>
                 I come off as one of those hobbyist, but I do it for more than just "collecting." I am very passionate
@@ -112,12 +125,12 @@
                 edcuating others about the joy of keeping and caring for exotic animals. <a
                     href="herptoculture.html">Read More</a>
             </p>
-            <h2 id="theboys">My Dogs</h2>
+            <h2 id="theboys">My Dogs</h2> <!--id is for placeholder in intro-->
             <div id="benji">
-                <h3>Benji <i class="fa-solid fa-dog"></i></h3>
-                <img src="pictures/benji.jpg" alt="Picture of a brown dog with a red handkerchief">
-                <!--Picture of my dog-->
-                <p>
+                <img class="doggos" src="pictures/benji.jpg" alt="Picture of a brown dog with a red handkerchief">
+                <!--Picture of my dog Benji-->
+                <h3 class="doggoheader">Benji <i class="fa-solid fa-dog"></i></h3>
+                <p class="doggoparagraph">
                     This is Benji, he is 7 years old and has two different colored eyes.
                     One eye is brown and the other is blue.
                     He is a mix of four dog breeds: German Shepherd, Australian Shepherd, Jack Russel Terrier, and Chow
@@ -126,10 +139,10 @@
                 </p>
             </div>
             <div id="bubbles">
-                <h3>Bubbles <i class="fa-solid fa-dog"></i></h3>
-                <img src="pictures/bubbles.jpg" alt="Picture of a smiling pitbull with light blue eyes">
-                <!--Picture of my dog-->
-                <p>
+                <img class="doggos" src="pictures/bubbles.jpg" alt="Picture of a smiling pitbull with light blue eyes">
+                <!--Picture of my dog Bubbles-->
+                <h3 class="doggoheader">Bubbles <i class="fa-solid fa-dog"></i></h3>
+                <p class="doggoparagraph">
                     This is Bubbles, he is 6 years old and is a mix of two dog breeds: Blue Heeler and Pit Bull.
                     Although a lot of people have their opinions of Pit Bulls, he is super loving and super motivated by
                     treats.
@@ -140,7 +153,7 @@
     </main>
     <footer>
         &copy; Copyright Cj Sison 2025
-        <p><a href="#top">Return to Top</a></p>
+        <p><a href="#top">Return to Top</a></p> <!--href goes back to top of page-->
     </footer>
 </body>
 

@@ -1,5 +1,4 @@
 #introduction a:hover {
-    /*ID Selector with a Descendant Relational Selector, Styles the pseudo-element(:hover) of the <a> tag in the <p> tag ID:introduction*/
     color: var(--oc_link_hover_color);
     font-size: 125%;
 }
@@ -7,23 +6,23 @@
 h2 {
     margin-top: 2em;
 }
-h3{
-    margin-top: 1em;
-}
+
 #me {
     float: left;
     margin-right: 0.25em;
-    margin-left: 20%;
+    margin-left: 15%;
+    width: 100%;
+    max-width: 431px;
 }
 
 main p {
-    /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
+    padding: 1em;
+    margin: 0 15% 2em 15%;
     overflow: hidden;
     font-size: large;
 }
 
 .bothlist {
-    /*A Class Selector, Styles all elements in section:bothlist*/
     display: grid;
     /*Created the two columns of the two list*/
     grid-template-columns: auto auto;
@@ -35,7 +34,6 @@ main p {
 }
 
 section ul {
-    /*Descendant Selector, Styles <ul> tags that are descendant of the <section> tag*/
     background-color: var(--text_background_color);
     border: .25em solid var(--border_color);
     border-radius: 1em;
@@ -43,57 +41,34 @@ section ul {
 }
 
 .bothlist li {
-    /*Class Selector with a Descendant Selector, Styles the <li> tags that are descendant of the Class ".bothlist"*/
     text-align: left;
     line-height: 3em;
     font-size: large;
 }
 
-img {
-    /*Type Selector, Styles all <img> tags*/
-    width: 12%;
-    height: 12%;
-    min-width: 280px;
-}
-
-/*** Following CSS are for the Section: Jump To: ***/
-
-#jump {
-    margin-top: 0.5em;
-}
-#placeholder {
-    float: left;
-    text-align: center;
-    margin: 0 40% 0 40%;
-    text-indent: 0;
-}
-
-/*** Following CSS are for the Section: doggos ***/
-
-/*****************
-    All tags below 
-    are in <div> 
-    with ID:benji
+/***************** 
+Following CSS are for the Section: Owning animals
 *****************/
+div {
+    overflow: hidden;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
-div#benji>img {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:benji*/
+.doggos {
+    max-width: 250px;
     float: left;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-right: 0.25em;
 }
 
-div#benji>h3 {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:benji*/
-    padding-top: 1%;
+.doggoheader {
     text-align: left;
-    margin-left: 47%;
+    margin-left: 40%;
 }
 
-div#benji>p {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:benji*/
-    margin-left: 47%;
-    align-content: center;
+.doggoparagraph {
+    margin-left: 40%;
     text-indent: 0;
 }
 
@@ -102,29 +77,8 @@ div#benji>p {
     are in <div> 
     with ID:bubbles
 *****************/
-
-div#bubbles>h3 {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <h2> tags that are children of the <div> tag with an ID:bubbles*/
-    clear: left;
-    padding-top: 1%;
-    text-align: left;
-    margin-left: 47%;
-    
-}
-
 div#bubbles>img {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <img> tags that are children of the <div> tag with an ID:bubbles*/
-    float: left;
-    margin-left: 25%;
-    margin-right: 0.25em;
-    margin-bottom: 1em;
-}
-
-div#bubbles>p {
-    /*A Combination Selector for an ID within an element and a Child Relational Selector, Parent>Child, Styling <p> tags that are children of the <div> tag with an ID:bubbles*/
-    margin-left: 47%;
-    align-content: center;
-    text-indent: 0;
+    clear: left;
 }
 
 /***************** *****************/
@@ -132,93 +86,66 @@ div#bubbles>p {
 Media Queries Start Here
 *****************/
 
-@media only screen and (max-width: 1420px) {
+@media only screen and (max-width: 1407px) {
     main p {
         margin: 0 5% 1em 5%;
     }
 
     #introduction {
         clear: left;
-
     }
 
     #me {
         float: none;
         display: block;
         width: 25%;
+        min-width: 275px;
         margin: auto;
         margin-bottom: 1em;
     }
 
     h1 {
-        margin: 0 0 0.5em 0;
+        margin: 0 0 0.25em 0;
     }
 
-    div#benji>img {
+    .doggos {
         margin-left: 10%;
     }
 
-    div#bubbles>img {
-        margin-left: 10%;
-    }
-
-    div#benji>p {
-        margin-left: 37%;
-    }
-
-    div#bubbles>p {
-        margin-left: 37%;
+    .doggoparagraph {
+        margin-right: 10%;
+        margin-left: 30%;
     }
 }
 
-@media only screen and (max-width: 810px) {
-    div#benji>img {
+@media only screen and (max-width: 980px) {
+    .doggos {
         float: none;
         display: block;
-        width: 20%;
+        max-width: 250px;
         margin: auto;
         margin-bottom: 1em;
     }
 
-    div#bubbles>img {
-        float: none;
-        display: block;
-        width: 25%;
-        margin: auto;
-        margin-bottom: 1em;
+    .doggoparagraph {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    div#benji>p {
-        margin-left: 5%;
-    }
-
-    div#bubbles>p {
-        margin-left: 5%;
-    }
     div#benji>h3 {
-    text-align: center;
-    margin: auto;   
-}
-div#bubbles>h3 {
-    text-align: center;
-    margin: auto;
-    
-}
+        text-align: center;
+        margin: auto;
+    }
+
+    div#bubbles>h3 {
+        text-align: center;
+        margin: auto;
+
+    }
 }
 
 @media only screen and (max-width: 720px) {
     .bothlist {
         display: block;
     }
-}
-@media only screen and (max-width: 485px){
-    main p {
-        font-size:medium;
-        line-height: 2em;
-        text-indent: 1em;
-    }
-.bothlist li {
-    line-height: 2em;
-    font-size: medium;
-}
 }
