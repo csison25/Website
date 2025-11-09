@@ -34,7 +34,6 @@ a[href]:hover {
 img {
     border: .25em solid var(--border_color);
     border-radius: 1em;
-    margin: 0 auto;
 }
 
 body {
@@ -105,19 +104,39 @@ footer {
     nav_menu CSS
 *****************/
 #nav_menu {
-    padding-bottom: 3em;
     margin: auto;
     width: 100%;
 }
 
 #nav_menu ul {
     list-style-type: none;
-
+    position: relative;
 }
 
 #nav_menu ul li {
     float: left;
     width: 25%;
+}
+
+#nav_menu ul ul { 
+    display: none; /* Don't display submenus until hover of li */ 
+    position: absolute;
+    top: 100%; /* Position submenu at bottom of main menu */
+}
+
+#nav_menu ul ul li {  /* Display submenus vertically */ 
+    float: none; 
+} 
+
+#nav_menu ul li:hover > ul { /* Select ul child of li element */
+    display: block; /* Display submenu on hover of li element */
+    width: 100%;
+}
+
+#nav_menu > ul::after { 
+    content: ""; /* Add empty content to the end of the first ul */
+    display: block; /* Display that content as a block element */
+    clear: both; /* Stop the floating of the li elements */
 }
 
 #nav_menu ul li a {
@@ -151,24 +170,11 @@ footer {
 main {
     clear: left;
 }
-
-@media only screen and (max-width: 770px) {
-    #nav_menu {
-        padding-bottom: 0em;
-
-    }
-
-    #nav_menu ul li {
-        float: none;
-        width: 100%;
-    }
-
-    #nav_menu ul li a {
-        border-right: none;
-    }
+#dontshow {
+    display: none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
     #nav_menu ul li {
         float: none;
         width: 100%;
@@ -195,5 +201,8 @@ main {
         background-color: rgb(214, 126, 126);
         /* Can put, !important HERE if you want */
 
+    }
+    #dontshow {
+        display: block;
     }
 }

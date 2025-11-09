@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" This is a Website made by Cj Sison, a student of Olympic College.">
+    <!--stylesheets-->
+    <!--this one is for the slicknav-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+    <!--my stylesheets below-->
+    <link rel="stylesheet" href="styles/structure.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <!--favicon-->
+    <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
+    <!--fontawesome script-->
+    <script src="https://kit.fontawesome.com/0c3d26e165.js" crossorigin="anonymous"></script>
+    <!--googlefonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Oswald:wght@200..700&family=Sour+Gummy:ital@0;1&display=swap"
+        rel="stylesheet">
+    <!--mobile nav menu scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
+        }); </script>
+    <title>Cj's Webpage</title> <!--title of webpage, shows in browser tab-->
+</head>
+
+<body>
+    <nav id="mobile_menu"> <!--slicknav menu <nav> tag-->
+
+    </nav>
+    <nav id="nav_menu"> <!--regular menu <nav> tag-->
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Ping Pong</a></li>
+            <li><a href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herptoculture</a>
+                <ul>
+                    <li><a class="lastitem current" href="herpgallery.html"><i class="fa-solid fa-camera-retro"></i>
+                            Gallery</a></li>
+                    <li id="dontshow"><a href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herptoculture</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="finalproject.html" class="lastitem"><i class="fa-solid fa-file-code"></i> Final Project</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>The Zoo Gallery</h1>
+        </header>
+        <section id="gallery">
+            <div>
+                <img src="pictures/herppictures/gallery/setup.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/beardie1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/lwhjgecko.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/creamgecko1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/blackgecko1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/redgecko1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/browngecko1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/leachie.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/lwrgecko.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/blackgecko2.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/browngecko2.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/creamgecko2.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/redgecko2.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/browngecko3.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/creamgecko3.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/redgecko3.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/redgecko4.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/tarantula1.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/redgecko5.jpg" alt="">
+            </div>
+            <div>
+                <img src="pictures/herppictures/gallery/tarantula2.jpg" alt="">
+            </div>
+            <div>
+                <img id="bottom" src="pictures/herppictures/gallery/redgecko6.jpg" alt="">
+            </div>
+            <div>
+                <img id="bottom" src="pictures/herppictures/gallery/tarantula3.jpg" alt="">
+            </div>
+            <div>
+                <img id="bottom" src="pictures/herppictures/gallery/redgecko7.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; Copyright Cj Sison 2025
+        <p><a href="#top">Return to Top</a></p>
+    </footer>
+</body>
+
+</html>

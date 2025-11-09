@@ -1,17 +1,21 @@
 :root {
     --imageshadowleft: rgb(0, 0, 255);
-    --imageshadowright:rgb(255, 0, 0);
+    --imageshadowright: rgb(255, 0, 0);
+    --figurebackgorundcolor: rgb(255, 255, 255);
 }
-.paragraphinborder{
+
+img {
     all: revert;
+}
+
+.paragraphinborder {
+    border: none; /* Removes border added to <p> tags in structure.css */
     margin: auto;
     text-indent: 2em;
     line-height: 2em;
     font-size: large;
 }
-img {
-    all: revert;
-}
+
 .picinborder {
     background-color: var(--text_background_color);
     border-radius: 1em;
@@ -22,16 +26,48 @@ img {
 }
 
 figure {
+    background-color: var(--figurebackgorundcolor);
+    box-shadow: -0.1em -0.1em 0.5em var(--imageshadowleft), 0.1em 0.1em 0.5em var(--imageshadowright);
+}
+
+.figureinborder {
     float: left;
     margin-right: 1em;
-    box-shadow: -0.1em -0.1em 0.5em var(--imageshadowleft), 0.1em 0.1em 0.5em var(--imageshadowright);
-    background-color: white;
 }
+
 figcaption {
     align-content: center;
     font-style: italic;
-    font-size:small;
+    font-size: small;
     padding: 0.5em 0;
     margin-left: 0.5em;
     margin-right: 0.5em;
+}
+
+.edumargin {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: min-content;
+}
+
+.scale {
+    width: 75%;
+    min-width: 300px;
+}
+
+#smallgallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  column-gap: 4em;
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 700px) {
+.figureinborder {
+    float: none;
+    width:min-content;
+    margin: auto;
+}
 }

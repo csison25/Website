@@ -114,12 +114,16 @@ Media Queries Start Here
 
     .doggos {
         margin-left: 10%;
+        margin-right: 1em;
     }
 
     .doggoparagraph {
         margin-right: 10%;
-        margin-left: 30%;
+        margin-left: 35%;
     }
+    .doggoheader {
+    margin-left: 35%;
+}
 }
 
 @media only screen and (max-width: 980px) {

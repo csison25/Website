@@ -1,0 +1,16 @@
+section#gallery {
+    display:flex;
+    flex-wrap: wrap;
+    row-gap: 3em;
+    column-gap: 3em;
+    padding: 1em;
+    justify-content: center;
+    
+}
+section#gallery>div {
+    text-align: center;
+    position: relative;
+}
+img {
+    width: 300px;
+}
