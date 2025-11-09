@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    background-image: url(/pictures/pingpongpictures/pingpongh1bg.jpg);
+    background-image: url("/pictures/pingpongpictures/pingpongh1bg.jpg");
     color: white;
     font-size: 300%;
     font-style: oblique;
