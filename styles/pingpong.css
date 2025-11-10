@@ -18,14 +18,14 @@ main {
     margin-left: 5%;
     margin-right: 5%;
 }
-
+pictures/pingpongpicture/pingpong.jpg
 img {
     border-color: var(--whitecolor);
     width: 100%;
 }
 
 header {
-    background-image: url("/pictures/pingpongpicture/pingpong.jpg");
+    background-image: url("/pictures/pingpongpicture/headerbackground.jpg");
     border-bottom: 2px solid var(--blackcolor);
     background-position: 45% 25%;
     padding-top: 2.5%;
