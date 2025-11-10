@@ -25,10 +25,10 @@ img {
 }
 
 header {
-    background-image: url("/pictures/pingpongpicture/pingpong.jpg");
+    background: url("/pictures/pingpongpicture/pingpong.jpg");
     border-bottom: 2px solid var(--blackcolor);
+    background-size:cover;
     background-position: 45% 25%;
-    height: 100px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
