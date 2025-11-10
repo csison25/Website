@@ -1,40 +1,134 @@
+:root {
+    --whitecolor: rgb(255, 255, 255);
+    --blackcolor: rgb(0, 0, 0);
+    --backgroundofbody: rgb(227, 227, 227);
+}
+
 main p {
     all: revert;
-}
-img {
-    border-color: white;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: rgb(227, 227, 227);
+    background: var(--backgroundofbody);
+}
+
+main {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+img {
+    border-color: var(--whitecolor);
+    width: 100%;
 }
 
 h1 {
-    background-image: url("/pictures/pingpongpictures/pingpongh1bg.jpg");
-    color: white;
-    font-size: 300%;
+    background-image: url("/pictures/pingpongpicture/pingpong.jpg");
+    color: var(--whitecolor);
+    font-size: 400%;
     font-style: oblique;
     text-shadow:
-    -2px -2px 0 black, /* Top-left shadow */
-     2px -2px 0 black, /* Top-right shadow */
-    -2px  2px 0 black, /* Bottom-left shadow */
-     2px  2px 0 black; /* Bottom-right shadow */
-    border-bottom: 2px solid black;
+        -2px -2px 0 var(--blackcolor),
+        /* Top-left shadow */
+        2px -2px 0 var(--blackcolor),
+        /* Top-right shadow */
+        -2px 5px 0 var(--blackcolor),
+        /* Bottom-left shadow */
+        5px 5px 0 var(--blackcolor);
+    /* Bottom-right shadow */
+    border-bottom: 2px solid var(--blackcolor);
     background-position: 45% 25%;
     height: 100px;
-    padding-top: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }
+
+#rulesintroh2 {
+    font-size: 350%;
+}
+
 #rules {
     width: 40%;
     float: left;
+    margin-right: 3em;
+    margin-bottom: 2em;
+    min-width: 250px;
 }
 
-@media only screen and (max-width: 810px) {
-    h1 {font-size: 250%
+#rulespara {
+    width: 100%;
+}
+
+div#rulespara>p {
+    font-size: 400%;
+    margin: 0;
+}
+
+#summary {
+    clear: left;
+}
+
+#summaryintrotext {
+    font-size: 200%;
+    margin: 0;
+    margin-bottom: 0.25em;
+}
+
+#summaryintropara {
+    font-size: 125%;
+    line-height: 2em;
+    text-indent: 2em;
+}
+
+.rulesh3 {
+    font-size: 150%;
+    font-weight: 800;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1220px) {
+    div#rulespara>p {
+        font-size: 300%
     }
 }
-@media only screen and (max-width: 670px) {
-    h1 {font-size: 200%
+@media only screen and (max-width: 1080px) {
+    h1 {
+        font-size: 300%
+    }
+}
+@media only screen and (max-width: 910px) {
+    div#rulespara>p {
+        font-size: 200%;
+    }
+    #rulesintroh2 {
+    font-size: 235%;
+}
+}
+
+@media only screen and (max-width: 830px) {
+    h1 {
+        font-size: 200%;
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div#rulespara>p {
+        font-size: 150%;
+    }
+    #rulesintroh2 {
+    font-size: 200%;
+}
+}
+@media only screen and (max-width: 490px) {
+    #rules {
+        float: none;
+        margin: auto;
+    }
+
+    div#rulespara>p {
+        font-size: 200%;
     }
 }
