@@ -1,13 +1,8 @@
 :root {
     --whitecolor: rgb(255, 255, 255);
+    --imgborder: rgb(95, 95, 95);
     --blackcolor: rgb(0, 0, 0);
-    --backgroundofbody: rgb(227, 227, 227);
-}
-
-main p {
-    all: revert;
-    margin: 0;
-    padding: 0;
+    --backgroundofbody: rgb(237, 237, 237);
 }
 
 body {
@@ -18,41 +13,43 @@ main {
     margin-left: 5%;
     margin-right: 5%;
 }
+
 img {
-    border-color: var(--whitecolor);
+    border-color: var(--imgborder);
     width: 100%;
 }
 
 header {
-    background-image: url("/pictures/pingpongpicture/headerbackground.jpg");
+    background-image: url("../pictures/pingpongpicture/headerbackground.png");
     border-bottom: 2px solid var(--blackcolor);
     background-position: 45% 25%;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
+
 h1 {
     color: var(--whitecolor);
     font-size: 400%;
     font-style: oblique;
     text-shadow:
-        -2px -2px 0 var(--blackcolor),
+        -2px -2px 0 black,
         /* Top-left shadow */
-        2px -2px 0 var(--blackcolor),
+        2px -2px 0 black,
         /* Top-right shadow */
-        -2px 5px 0 var(--blackcolor),
+        -2px 2px 0 black,
         /* Bottom-left shadow */
-        5px 5px 0 var(--blackcolor);
+        2px 2px 0 black;
     /* Bottom-right shadow */
-    
+
 }
 
 #rulesintroh2 {
     font-size: 350%;
 }
 
-#rules {
-    width: 40%;
+#rulesimg {
     float: left;
+    width: 40%;
     margin-right: 3em;
     margin-bottom: 2em;
     min-width: 250px;
@@ -69,6 +66,7 @@ div#rulespara>p {
 
 #summary {
     clear: left;
+    margin-bottom: 3em;
 }
 
 #summaryintrotext {
@@ -78,9 +76,25 @@ div#rulespara>p {
 }
 
 #summaryintropara {
-    font-size: 125%;
+    font-size: 150%;
     line-height: 2em;
     text-indent: 2em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--blackcolor);
+
+}
+
+#listofrules {
+    background-color: rgba(170, 170, 170, 0.463);
+    padding: 1em
+}
+
+#listofrules p {
+    margin-top: 0.25em;
+    margin-bottom: 2em;
+    margin-left: 4em;
+    font-size: large;
+    line-height: 2em;
 }
 
 .rulesh3 {
@@ -94,18 +108,21 @@ div#rulespara>p {
         font-size: 300%
     }
 }
+
 @media only screen and (max-width: 1080px) {
     h1 {
         font-size: 300%
     }
 }
-@media only screen and (max-width: 910px) {
+
+@media only screen and (max-width: 920px) {
     div#rulespara>p {
         font-size: 200%;
     }
+
     #rulesintroh2 {
-    font-size: 235%;
-}
+        font-size: 235%;
+    }
 }
 
 @media only screen and (max-width: 830px) {
@@ -113,27 +130,29 @@ div#rulespara>p {
         font-size: 200%;
         padding-bottom: 0;
         text-shadow:
-        -1px -1px 0 var(--blackcolor),
-        /* Top-left shadow */
-        1px -1px 0 var(--blackcolor),
-        /* Top-right shadow */
-        -2px 3px 0 var(--blackcolor),
-        /* Bottom-left shadow */
-        3px 3px 0 var(--blackcolor);
-    /* Bottom-right shadow */
+            -1.5px -1.5px 0 black,
+            /* Top-left shadow */
+            1.5px -1.5px 0 black,
+            /* Top-right shadow */
+            -1.5px 1.5px 0 black,
+            /* Bottom-left shadow */
+            1.5px 1.5px 0 black;
+            /* Bottom-right shadow */
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 610px) {
     div#rulespara>p {
         font-size: 150%;
     }
+
     #rulesintroh2 {
-    font-size: 200%;
+        font-size: 200%;
+    }
 }
-}
-@media only screen and (max-width: 490px) {
-    #rules {
+
+@media only screen and (max-width: 510px) {
+    #rulesimg {
         float: none;
         margin: auto;
     }
@@ -141,4 +160,11 @@ div#rulespara>p {
     div#rulespara>p {
         font-size: 200%;
     }
+    #summaryintropara {
+    font-size: 100%;
+}
+#listofrules p {
+    margin-left: 0.5em;
+    margin-right:0.5em;
+}
 }

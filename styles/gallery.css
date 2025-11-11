@@ -4,6 +4,7 @@ h1 {
 }
 section#gallery {
     display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
     row-gap: 3em;
     column-gap: 3em;
