@@ -1,33 +1,43 @@
-#introduction a:hover {
+#introduction a:hover { /*Hover effect that happens to the tag ID:introduction*/
     color: var(--oc_link_hover_color);
     font-size: 125%;
 }
 
-section {
+section { /*gives all <section> tags a margin of 1em on the top*/
     margin-top: 1em;
 }
 
-#me {
+#me {/*An image of me floated to the left*/
     float: left;
     margin-right: 0.25em;
     margin-left: 15%;
     margin-bottom: 2em;
     width: 100%;
-    max-width: 431px;
+    max-width: 431px; /*The max width the image will go to when scaling*/
 }
 
-main p {
+main p { /*Styling will applies to all <p> tags in the <main> tag*/
     padding: 1em;
     margin: 0 15% 2em 15%;
-    overflow: hidden;
+    overflow: hidden; /*Makes the P tags styling no go behind other items on the page, needed for introduction image and paragraph*/
     font-size: large;
 }
+.paragraphstyles { /*Class selector, given to <p> tags for stylings*/
+    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
+    text-align: left;
+    text-indent: 2em;
+    line-height: 2.5em;
+    /*The border and color that will go around elements given this class*/
+    background-color: var(--text_background_color);
+    border-radius: 1em;
+    border: .25em solid var(--border_color);
 
-#mindseth2 {
+}
+#mindseth2 { 
     clear:left;
 }
 
-.bothlist {
+#bothlist { /*ID Selector, given to a <sectino> tag*/
     display: grid;
     /*Created the two columns of the two list*/
     grid-template-columns: auto auto;
@@ -38,40 +48,40 @@ main p {
     clear: both;
 }
 
-section ul {
+#bothlist li { /*Styling applies to <li> tags that are inside of an element with the ID: bothlist*/
+    text-align: left;
+    line-height: 3em;
+    font-size: large;
+}
+
+section ul { /*Styling applies to <ul> tags inside of <section> tags*/
     background-color: var(--text_background_color);
     border: .25em solid var(--border_color);
     border-radius: 1em;
     padding: 1em 1.5em 1em 3em;
 }
 
-.bothlist li {
-    text-align: left;
-    line-height: 3em;
-    font-size: large;
-}
-
 /***************** 
 Following CSS are for the Section: Owning animals
 *****************/
 div {
-    overflow: hidden;
+    overflow: hidden; /*Hides the overflow of other tags in the div tag*/
     margin-bottom: 1em;
 }
 
-.doggos {
+.doggos { /*Class selector, given to <img> tags*/
     max-width: 250px;
     float: left;
     margin-left: 20%;
     margin-right: 0.25em;
 }
 
-.doggoheader {
+.doggoheader { /*Class selector, given to <h#> tags*/
     text-align: left;
     margin-left: 40%;
 }
 
-.doggoparagraph {
+.doggoparagraph { /*Class selector, given to <p> tags*/
     margin-left: 40%;
     text-indent: 0;
 }
@@ -81,7 +91,7 @@ div {
     are in <div> 
     with ID:bubbles
 *****************/
-div#bubbles>img {
+div#bubbles>img { /*Makes the img not flow to the right of the above floated element*/
     clear: left;
 }
 
@@ -95,12 +105,8 @@ Media Queries Start Here
         margin: 0 5% 1em 5%;
     }
 
-    #introduction {
-        clear: left;
-    }
-
     #me {
-        float: none;
+        float: none; /*Makes the image of me not be floated anymore*/
         display: block;
         width: 25%;
         min-width: 275px;
@@ -122,13 +128,13 @@ Media Queries Start Here
         margin-left: 35%;
     }
     .doggoheader {
-    margin-left: 35%;
+        margin-left: 35%;
 }
 }
 
 @media only screen and (max-width: 980px) {
     .doggos {
-        float: none;
+        float: none; /*Makes the <img> of my dogs not be floated anymore*/
         display: block;
         max-width: 250px;
         margin: auto;
@@ -153,7 +159,7 @@ Media Queries Start Here
 }
 
 @media only screen and (max-width: 720px) {
-    .bothlist {
+    #bothlist { /*Makes the <ul> tags not be displayed in a grid anymore and puts the one on top the other*/
         display: block;
     }
 }

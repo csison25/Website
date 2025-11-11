@@ -1,31 +1,26 @@
+:root {
+    --boxshadowcolor: rgb(0, 0, 0);
+}
 h1 {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-section#gallery {
+section#gallery { /*Makes the gallery of images display in a flex box*/
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Makes the flexboxes wrap (move down in rows) as the page size decreases*/
     row-gap: 3em;
     column-gap: 3em;
     padding: 1em;
-    justify-content: center;
+    justify-content: center; /*Centers the content onto the page*/
     
 }
-section#gallery>div {
-    text-align: center;
-    position: relative;
-}
-img {
+img { /*Set img width*/
     width: 300px;
 }
-.scale {
-    transform-origin: center 60%; 
-    position: relative;
-    overflow: hidden;
-}
-img:hover {
+
+img:hover { /*Hover effect that makes the images slightly bigger when hovered over and applies a box shadow*/
     transform: scale(1.10);
     z-index: 1;
-    box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
+    box-shadow: -0.1em -0.1em 0.5em var(--boxshadowcolor), 0.1em 0.1em 0.5em var(--boxshadowcolor);
 }

@@ -1,20 +1,25 @@
 :root {
+    /*Custom Properties :root Pseudo-class Selector*/
     --imageshadowleft: rgb(0, 0, 255);
     --imageshadowright: rgb(255, 0, 0);
     --figurebackgorundcolor: rgb(255, 255, 255);
 }
 
-h2{
+/*****************************
+    THIS STYLE PAGE IS FOR: herptoculture.html 
+*****************************/
+h2 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
 img {
+    /*This declaration removes the previous stylings put by the structure.css page*/
     all: revert;
 }
 
 .paragraphinborder {
-    border: none; /* Removes border added to <p> tags in structure.css */
+    /*Class selector, given to <p> tags that are in a bordered area*/
     margin: auto;
     text-indent: 2em;
     line-height: 2em;
@@ -22,6 +27,7 @@ img {
 }
 
 .picinborder {
+    /*Class selector, given to <section> tags*/
     background-color: var(--text_background_color);
     border-radius: 1em;
     padding: 1em;
@@ -36,11 +42,13 @@ figure {
 }
 
 .figureinborder {
+    /*Class Selector, makes the <figure> tags float in the <section> tags*/
     float: left;
     margin-right: 1em;
 }
 
 figcaption {
+    /*Styling for the words below the <img> tags*/
     align-content: center;
     font-style: italic;
     font-size: small;
@@ -50,29 +58,37 @@ figcaption {
 }
 
 .edumargin {
+    /*Class Selector, given to <figure> tags, gives spacing between the images at the bottom of the page*/
     margin-top: 2em;
     margin-bottom: 2em;
     width: min-content;
 }
 
 .scale {
+    /*Class selector, used to scale <img> tags*/
     width: 75%;
     min-width: 300px;
 }
 
 #smallgallery {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center;
-  column-gap: 4em;
-  margin-left: 5%; 
-  margin-right: 5%;
+    /*ID selector, styling is a flexbox given to a <section> tag, Makes the images on the bottom be able to move smoothly on the screen*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 4em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+/***************** *****************/
+/*****************
+Media Queries Start Here
+*****************/
+
 @media only screen and (max-width: 700px) {
-.figureinborder {
-    float: none;
-    width:min-content;
-    margin: auto;
-}
+    .figureinborder { /*Stops the float of the <figure> tags in <section> tags*/
+        float: none;
+        width: min-content;
+        margin: auto;
+    }
 }

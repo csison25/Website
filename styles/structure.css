@@ -9,7 +9,15 @@
     --backgroundcolor: rgb(255, 255, 255);
     --nav_hover_color: rgb(255, 168, 168);
     --nav_text_color: rgb(255, 255, 255);
+    --footerbackgroundcolor: rgb(0, 0, 0);
+    --footertextcolor: rgb(255, 255, 255);
+    --slicknavmenucolor: rgb(214, 126, 126);
 }
+/*****************************
+    THIS STYLE PAGE IS THE STRUCTURE PAGE FOR THE OTHER PAGES
+        LINKED TO THESE HTML(s): 
+            index , pingpong ,herptoculture , herpgallery 
+*****************************/
 
 * {
     /*Universal Selector*/
@@ -32,11 +40,13 @@ a[href]:hover {
 }
 
 img {
+    /*Styling will apply to all <img> tags*/
     border: .25em solid var(--border_color);
     border-radius: 1em;
 }
 
 body {
+    /*Styling that applies to the body, this is the background for the body*/
     background: radial-gradient(circle, transparent 5%, var(--backgroundcolor) 10%, var(--backgroundcolor) 90%, transparent 90%, transparent), radial-gradient(circle, transparent 10%, var(--backgroundcolor) 10%, var(--backgroundcolor) 80%, transparent 80%, transparent) 40px 40px, linear-gradient(var(--body_bg_color) 3.2px, transparent 3.2px) 0 -1.6px, linear-gradient(90deg, var(--body_bg_color) 3.2px, var(--backgroundcolor) 3.2px) -1.6px 0;
     background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
     background-attachment: fixed;
@@ -45,31 +55,19 @@ body {
 h1,
 h2,
 h3 {
-    /*Combination Selector (Multiple Selector)*/
+    /*Combination Selector (Multiple Selector), all listed tags will have this styling applied to them*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
     text-align: center;
 }
 
-.paragraphstyles {
-    /*Descendant Relational Selector, Styles <p> tags that are descendant of the <main> tag*/
-    text-align: left;
-    text-indent: 2em;
-    line-height: 2.5em;
-    /*The border and color that will go around all <p> elements*/
-    background-color: var(--text_background_color);
-    border-radius: 1em;
-    border: .25em solid var(--border_color);
-
-}
-
 footer {
     /*Type Selector, Styles the <footer> tag*/
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: var(--footerbackgroundcolor);
+    color: var(--footertextcolor);
     padding: 1.25em;
-    clear: left;
+    clear: left; /*Has the footer not go passed the floated image above it*/
     text-align: center;
 }
 
@@ -109,29 +107,29 @@ footer {
 }
 
 #nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around;
+    display: flex; /*Makes the navmenu act as a flexbox, below are the stylings for the flexbox*/
+    flex-basis: 100%; /*Makes the flexbox take up the whole width of the page*/
+    justify-content: space-around; /*Allocates space evenly between flex items with half-size spaces before the first item and after the last item*/
     list-style-type: none;
     position: relative;
 }
 
 #nav_menu ul li {
-    flex-basis: 25%;
+    flex-basis: 25%; /*Makes the contents of the flexbox take up 25% of the set parent that the flexbox was declared in*/
 }
 
 #nav_menu ul ul { 
     display: none; /* Don't display submenus until hover of li */
-    position: absolute;
+    position: absolute; /*Makes the nested ul take position aboslutely where it is declared in space below the item it is nested in*/
 }
 
-#nav_menu ul ul li {  /* Display submenus vertically */ 
+#nav_menu ul ul li {  /* Display submenus vertically Subpages: Herpetoculture (ONLY visible on mobile), Gallery page*/ 
     float: none; 
 } 
 
 #nav_menu ul li:hover > ul { /* Select ul child of li element */
     display: block; /* Display submenu on hover of li element */
-    width: 25%;
+    width: 25%; /*MUST BE THE SAME AS THE FLEX-BASIS on nav_menu ul li {} Line: 129, Makes the <li> item display as 25% of width of page*/
 }
 
 #nav_menu > ul::after { 
@@ -156,39 +154,28 @@ footer {
     background-color: var(--nav_hover_color);
 }
 
-#nav_menu ul li a.lastitem {
+#nav_menu ul li a.lastitem { /*Takes the border off the right of the last navmenu item*/
     border-right: none;
 }
 
-#nav_menu ul li a.current {
+#nav_menu ul li a.current { /*Makes the menu button for the page that is being displayed change color to indicate user is viewing that page*/
     background-color: var(--nav_hover_color);
 }
 
-#mobile_menu {
+#mobile_menu { /*Mobile menu not visible, done on purpose, only visible when display is changed in a media query*/
     display: none;
 }
 
-main {
-    clear: left;
-}
-#dontshow {
+#dontshow { /*Makes the submenu button for Herpetoculture not show, Visible via media query*/
     display: none;
 }
+
+/***************** *****************/
+/*****************
+Media Queries Start Here
+*****************/
 
 @media only screen and (max-width: 700px) {
-    #nav_menu ul li {
-        float: none;
-        width: 100%;
-        padding: 0;
-    }
-
-    #nav_menu ul li a {
-        border-bottom: 2px solid rgb(189, 19, 19);
-    }
-
-    #nav_menu ul li a.lastitem {
-        border-bottom: none;
-    }
 
     #nav_menu {
         display: none;
@@ -199,9 +186,8 @@ main {
     }
 
     .slicknav_menu {
-        background-color: rgb(214, 126, 126);
+        background-color: var(--slicknavmenucolor);
         /* Can put, !important HERE if you want */
-
     }
     #dontshow {
         display: block;

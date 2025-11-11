@@ -1,15 +1,16 @@
 :root {
+    /*Custom Properties :root Pseudo-class Selector*/
     --whitecolor: rgb(255, 255, 255);
     --imgborder: rgb(95, 95, 95);
     --blackcolor: rgb(0, 0, 0);
     --backgroundofbody: rgb(237, 237, 237);
 }
 
-body {
+body { /*Background of the <body> tag*/
     background: var(--backgroundofbody);
 }
 
-main {
+main { /*margin applied to hte <main>*/
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -19,10 +20,10 @@ img {
     width: 100%;
 }
 
-header {
-    background-image: url("../pictures/pingpongpicture/headerbackground.png");
-    border-bottom: 2px solid var(--blackcolor);
-    background-position: 45% 25%;
+header { /*Background applied to the <header> tag*/
+    background-image: url("../pictures/pingpongpicture/headerbackground.png");/*img background*/
+    border-bottom: 2px solid var(--blackcolor);/*applies a border to the bottom of the <header> tag*/
+    background-position: 45% 25%; /*Changes the positioning of the image in the space of the <header> tag*/
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
@@ -43,11 +44,11 @@ h1 {
 
 }
 
-#rulesintroh2 {
+#rulesintroh2 { /*Changes font size*/
     font-size: 350%;
 }
 
-#rulesimg {
+#rulesimg { /*Floats this img to the left*/
     float: left;
     width: 40%;
     margin-right: 3em;
@@ -55,27 +56,27 @@ h1 {
     min-width: 250px;
 }
 
-#rulespara {
+#rulespara { /*Makes the <p> this ID is on, take up 100% of the width of its container*/
     width: 100%;
 }
 
-div#rulespara>p {
+div#rulespara>p { /*Child Relational selector, Styles <p> tags that are children of the div#rulespara element*/
     font-size: 400%;
     margin: 0;
 }
 
-#summary {
+#summary { /*ID selector, makes the element not flow to the right of the floated elements above it*/
     clear: left;
     margin-bottom: 3em;
 }
 
-#summaryintrotext {
+#summaryintrotext { /*ID selector*/
     font-size: 200%;
     margin: 0;
     margin-bottom: 0.25em;
 }
 
-#summaryintropara {
+#summaryintropara { /*ID selector*/
     font-size: 150%;
     line-height: 2em;
     text-indent: 2em;
@@ -84,12 +85,12 @@ div#rulespara>p {
 
 }
 
-#listofrules {
+#listofrules { /*ID selector*/
     background-color: rgba(170, 170, 170, 0.463);
     padding: 1em
 }
 
-#listofrules p {
+#listofrules p { /*Descendant Relational selector styles <p> tags that are decendants of #listofrules*/
     margin-top: 0.25em;
     margin-bottom: 2em;
     margin-left: 4em;
@@ -97,11 +98,16 @@ div#rulespara>p {
     line-height: 2em;
 }
 
-.rulesh3 {
+.rulesh3 { /*Class selector, given to <h#> tags*/
     font-size: 150%;
     font-weight: 800;
     text-align: left;
 }
+
+/***************** *****************/
+/*****************
+Media Queries Start Here
+*****************/
 
 @media only screen and (max-width: 1220px) {
     div#rulespara>p {
@@ -153,7 +159,7 @@ div#rulespara>p {
 
 @media only screen and (max-width: 510px) {
     #rulesimg {
-        float: none;
+        float: none; /*makes the img no longer be floated at this viewport width*/
         margin: auto;
     }
 
