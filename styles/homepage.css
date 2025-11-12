@@ -37,15 +37,24 @@ main p { /*Styling will applies to all <p> tags in the <main> tag*/
     clear:left;
 }
 
+#hobbylist {
+    grid-area: hobby;
+}
+
+#interestlist {
+    grid-area: interest;    
+}
+
 #bothlist { /*ID Selector, given to a <sectino> tag*/
     display: grid;
     /*Created the two columns of the two list*/
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     /*Two equal columns*/
+    grid-template-areas: 
+        " hobby interest";
     justify-items: center;
     /*Makes the border background fit the text*/
     margin: auto 15% auto 15%;
-    clear: both;
 }
 
 #bothlist li { /*Styling applies to <li> tags that are inside of an element with the ID: bothlist*/
@@ -160,6 +169,9 @@ Media Queries Start Here
 
 @media only screen and (max-width: 720px) {
     #bothlist { /*Makes the <ul> tags not be displayed in a grid anymore and puts the one on top the other*/
-        display: block;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        " hobby" 
+        "interest";
     }
 }

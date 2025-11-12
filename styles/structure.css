@@ -2,8 +2,8 @@
     /*Custom Properties :root Pseudo-class Selector*/
     --text_background_color: rgb(255, 124, 124);
     --border_color: rgb(79, 50, 96);
-    --link_color: rgb(94, 131, 252);
-    --link_hover_color: rgb(122, 21, 216);
+    --link_color: rgb(0, 47, 201);
+    --link_hover_color: rgb(160, 99, 217);
     --oc_link_hover_color: rgb(149, 0, 0);
     --body_bg_color: rgba(184, 186, 197, 0.57);
     --backgroundcolor: rgb(255, 255, 255);
@@ -12,6 +12,7 @@
     --footerbackgroundcolor: rgb(0, 0, 0);
     --footertextcolor: rgb(255, 255, 255);
     --slicknavmenucolor: rgb(214, 126, 126);
+    --slicknavmenutextcolor: rgb(255, 255, 255);
 }
 /*****************************
     THIS STYLE PAGE IS THE STRUCTURE PAGE FOR THE OTHER PAGES
@@ -60,6 +61,7 @@ h3 {
     font-weight: 900;
     font-variant: small-caps;
     text-align: center;
+    font-size: 175%;
 }
 
 footer {
@@ -184,7 +186,9 @@ Media Queries Start Here
     #mobile_menu {
         display: block;
     }
-
+    nav#mobile_menu a[href] {
+        color: var(--slicknavmenutextcolor);
+    }
     .slicknav_menu {
         background-color: var(--slicknavmenucolor);
         /* Can put, !important HERE if you want */
