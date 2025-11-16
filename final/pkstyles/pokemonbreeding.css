@@ -76,19 +76,69 @@ main {
 /*****************
 Media Queries Start Here
 *****************/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1030px) {
     main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea hea hea"
-        "ove ove ove img"
-        "jud jud im2 im3"
-        "bbr bbr im4 im5"
-        "ntb ntb ntb im6"
-        "hat hat im7 im8"
-        "res res res res";
+        "hea hea"
+        "ove im1"
+        "jud jud"
+        "im2 im3"
+        "bbr bbr"
+        "im4 im5"
+        "ntb im6"
+        "hat hat"
+        "im7 im8"
+        "res res";
+}
+}
+
+@media only screen and (max-width: 770px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea hea"
+        "ove ove"
+        "im1 im1"
+        "jud jud"
+        "im2 im3"
+        "bbr bbr"
+        "im4 im5"
+        "ntb ntb"
+        "im6 im6"
+        "hat hat"
+        "im7 im8"
+        "res res";
+}
+}
+
+@media only screen and (max-width: 770px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea"
+        "ove"
+        "im1"
+        "jud"
+        "im2"
+        "im3"
+        "bbr"
+        "im4"
+        "im5"
+        "ntb"
+        "im6"
+        "hat"
+        "im7"
+        "im8"
+        "res";
 }
 }

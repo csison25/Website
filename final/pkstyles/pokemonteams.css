@@ -73,19 +73,65 @@ main {
 /*****************
 Media Queries Start Here
 *****************/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1030px) {
     main {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 1em;
-        grid-template-areas:
-            "hea hea hea hea hea"
-            "ove ove ove ove ove"
-            "cho cho cho cho im1"
-            "str str str im2 im2"
-            "im4 im5 ite ite ite"
-            "ter ter ter im6 im7"
-            "res res res res res";
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea hea"
+        "ove ove"
+        "cho im1"
+        "str str"
+        "im2 im3"
+        "ite ite"
+        "im4 im5"
+        "ter ter"
+        "im6 im7"
+        "res res";
+}
+}
+@media only screen and (max-width: 770px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea hea"
+        "ove ove"
+        "cho cho"
+        "im1 im1"
+        "str str"
+        "im2 im3"
+        "ite ite"
+        "im4 im5"
+        "ter ter"
+        "im6 im7"
+        "res res";
+}
+}
+@media only screen and (max-width: 480px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea"
+        "ove"
+        "cho"
+        "im1"
+        "str"
+        "im2"
+        "im3"
+        "ite"
+        "im4"
+        "im5"
+        "ter"
+        "im6"
+        "im7"
+        "res";
+}
 }
