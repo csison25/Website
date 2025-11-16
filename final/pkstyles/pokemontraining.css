@@ -1,0 +1,81 @@
+header {
+    grid-area: hea;
+}
+
+#stats {
+    grid-area: sta;
+}
+
+#effectstats {
+    grid-area: eff;
+}
+#effortvalues {
+    grid-area: evs;
+}
+
+#Increaseevs {
+    grid-area: upe;
+}
+
+#spread {
+    grid-area: spr;
+}
+
+#resource {
+    grid-area: res;
+}
+
+#img1 {
+    grid-area: im1;
+}
+
+#img2 {
+    grid-area: im2;
+}
+
+#img3 {
+    grid-area: im3;
+}
+
+#img4 {
+    grid-area: im4;
+}
+
+#img5 {
+    grid-area: im5;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+    grid-template-areas:
+        "hea hea hea hea"
+        "sta sta sta im1"
+        "eff eff im2 im3"
+        "evs evs upe upe"
+        "spr spr im4 im5"
+        "res res res res";
+}
+
+/***************** *****************/
+/*****************
+Media Queries Start Here
+*****************/
+@media only screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 1em;
+        grid-template-areas:
+            "hea hea hea hea hea"
+            "ove ove ove ove ove"
+            "cho cho cho cho im1"
+            "str str str im2 im2"
+            "im4 im5 ite ite ite"
+            "ter ter ter im6 im7"
+            "res res res res res";
+    }
+}

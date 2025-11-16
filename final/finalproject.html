@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Homepage -->
 <html lang="en">
 
 <head>
@@ -9,8 +10,8 @@
     <!--this one is for the slicknav-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
     <!--my stylesheets below-->
-    <link rel="stylesheet" href="styles/structure.css">
-    <!--NEED SPECIFIC STYLESHEET-->
+    <link rel="stylesheet" href="../final/pkstyles/pokemonstructure.css">
+    <link rel="stylesheet" href="../final/pkstyles/pokemonvgchome.css">
     <!--favicon-->
     <link rel="icon" href="pictures/sad_hamster_nav.png" type="image/png">
     <!--fontawesome script-->
@@ -28,33 +29,60 @@
         $(document).ready(function () {
             $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
         }); </script>
-    <title>Pokemon VGC</title>
+    <title>Cj's Webpage</title> <!--title of webpage, shows in browser tab-->
 </head>
 
 <body>
-    <nav id="mobile_menu">
+    <nav id="mobile_menu"> <!--slicknav menu <nav> tag-->
 
     </nav>
-    <nav id="nav_menu">
+    <nav id="nav_menu"> <!--regular menu <nav> tag-->
         <ul>
-            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
-            <li><a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Ping Pong</a></li>
-            <li><a href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herpetoculture</a>
+            <li><a class="current" href="../final/finalproject.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
                 <ul>
-                    <li id="dontshow"><a href="herptoculture.html"><i class="fa-solid fa-worm"></i> Herptoculture</a></li>
-                    <li><a class="lastitem" href="herpgallery.html"><i class="fa-solid fa-camera-retro"></i> Gallery</a></li>
+                    <li id="dontshow"><a href="../final/finalproject.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                    <li><a class="lastitem" href="../index.html"><i class="fa-regular fa-address-card"></i> About</a></li>
                 </ul>
             </li>
-            <li><a href="finalproject.html" class="lastitem current"><i class="fa-solid fa-file-code"></i>Final Project</a></li>
+            <li><a href="../final/pokemonvgc.html"><i class="fa-solid fa-gamepad"></i> VGC</a></li>
+            <li><a href="../final/pokemonteambuilding.html"><i class="fa-solid fa-blender"></i> Teambuilding</a></li>
+            <li><a href="../final/pokemontraining.html"><i class="fa-solid fa-hammer"></i> Training</a></li>
+            <li><a class="lastitem" href="../final/pokemonbreeding.html"><i class="fa-solid fa-dna"></i> Breeding</a>
+            </li>
+
         </ul>
     </nav>
     <main>
         <header>
-            <h1>Pokemon VGC</h1>
-            <h2>Under The Construction of Me</h2>
+            <img scr="" alt="img">
+            <h1>Welcome to The World of Pokemon</h1>
         </header>
+        <div id="overview">
+            <h2>Overview</h2>
+        <p>blah</p>
+        </div>
+        <div id="team">
+            <h2>Teambuilding</h2>
+            <p>blah</p>
+        </div>
+        <div id="train">
+            <h2>Training Pokemon</h2>
+            <p>blah</p>
+        </div>
+        <div id="breed">
+            <h2>Breeding Pokemon</h2>
+            <p>blah</p>
+        </div>
+        <div id="resource">
+            <h2>More Resources</h2>
+            <p>blah</p>
+        </div>
     </main>
-    
+    <footer>
+        &copy; Copyright Cj Sison 2025
+        <p><a href="#top">Return to Top</a></p> <!--href goes back to top of page-->
+    </footer>
 </body>
 
 </html>
+<!---->

@@ -35,6 +35,7 @@ main p { /*Styling will applies to all <p> tags in the <main> tag*/
 }
 #mindseth2 { 
     clear:left;
+    grid-area: mind;
 }
 
 #hobbylist {
@@ -170,8 +171,9 @@ Media Queries Start Here
 @media only screen and (max-width: 720px) {
     #bothlist { /*Makes the <ul> tags not be displayed in a grid anymore and puts the one on top the other*/
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        " hobby" 
-        "interest";
+        grid-template-rows: 1fr;
+        grid-template-areas:
+         "hobby" "interest"
+        ;
     }
 }

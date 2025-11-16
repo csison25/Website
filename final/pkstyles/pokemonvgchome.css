@@ -1,0 +1,48 @@
+header{
+    grid-area: hea;
+}
+#overview {
+    grid-area: ove;
+}
+#team{
+    grid-area: tea;
+}
+#train {
+    grid-area: tra;
+}
+#breed {
+    grid-area: bre;
+}
+#resrouce {
+    grid-area: res;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1em;
+    grid-template-areas: 
+        "hea hea"
+        "ove ove"
+        "tea tra"
+        "bre res";
+}
+/***************** *****************/
+/*****************
+Media Queries Start Here
+*****************/
+@media only screen and (max-width: 600px) {
+        main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+    grid-template-areas: 
+        "hea"
+        "ove"
+        "tea"
+        "tra"
+        "bre"
+        "res";
+}
+}
