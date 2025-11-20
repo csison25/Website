@@ -1,7 +1,7 @@
 :root {
     /*Custom Properties :root Pseudo-class Selector*/
     --text_background_color: rgb(87, 122, 209);
-    --border_color: rgb(199, 41, 41);
+    --border_color: rgb(0, 0, 0);
     --link_color: rgb(36, 87, 255);
     --link_hover_color: rgb(184, 0, 0);
     --body_bg_color: rgba(184, 186, 197, 0.57);
