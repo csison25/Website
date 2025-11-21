@@ -1,6 +1,3 @@
-header{
-    grid-area: hea;
-}
 #overview {
     grid-area: ove;
 }
@@ -28,57 +25,54 @@ header{
 #img3 {
     grid-area: im3;
 }
-main {
+#gridcontainer {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
+    grid-template-rows: repeat(5, max-content);
     grid-gap: 1em;
     grid-template-areas: 
-        "hea hea hea hea hea hea"
-        "ove ove ove ove ove ove"
-        "im1 im1 vgc vgc vgc vgc"
-        "im2 im2 dou dou dou dou"
-        "im3 im3 rul rul reg reg"
-        "res res res res res res";
+        ". ove ove ove ove ove ove ."
+        ". im1 im1 vgc vgc vgc vgc ."
+        ". im2 im2 dou dou dou dou ."
+        ". im3 im3 rul rul reg reg ."
+        ". res res res res res res .";
 }
 /***************** *****************/
 /*****************
 Media Queries Start Here
 *****************/
 @media only screen and (max-width: 1030px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-rows: repeat(8, max-content);
     grid-gap: 1em;
     grid-template-areas: 
-        "hea hea"
-        "ove ove"
-        "vgc vgc"
-        "im1 im1" 
-        "dou dou"
-        "im2 im2"
-        "rul reg"
-        "im3 im3"
-        "res res";
+        ". ove ove ."
+        ". vgc vgc ."
+        ". im1 im1 ." 
+        ". dou dou ."
+        ". im2 im2 ."
+        ". rul reg ."
+        ". im3 im3 ."
+        ". res res .";
 }
 }
 @media only screen and (max-width: 480px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
+    grid-template-rows: repeat(9, min-content);
     grid-gap: 1em;
     grid-template-areas: 
-        "hea"
-        "ove"
-        "vgc"
-        "im1" 
-        "dou"
-        "im2"
-        "rul"
-        "im3"
-        "reg"
-        "res";
+        ". ove ."
+        ". vgc ."
+        ". im1 ." 
+        ". dou ."
+        ". im2 ."
+        ". rul ."
+        ". im3 ."
+        ". reg ."
+        ". res .";
 }
 }

@@ -1,7 +1,6 @@
 :root {
     --readmorelinkbackground: rgb(173, 173, 162);
     --readmorelinkhoverbackground: rgb(188, 188, 169);
-    --divareacolor: rgb(215, 215, 215);
 }
 
 header {
@@ -33,22 +32,6 @@ h1 {
         2px 2px 0 black;
     /* Bottom-right shadow */
 
-}
-
-p {
-    line-height: 2em;
-    font-size: larger;
-}
-
-.divborder {
-    background-color: var(--divareacolor);
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
-}
-
-footer {
-    margin-top: 1em;
 }
 
 #videobox {

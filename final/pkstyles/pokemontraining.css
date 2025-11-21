@@ -1,7 +1,3 @@
-header {
-    grid-area: hea;
-}
-
 #stats {
     grid-area: sta;
 }
@@ -45,18 +41,17 @@ header {
     grid-area: im5;
 }
 
-main {
+#gridcontainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+    grid-template-rows: repeat(5, max-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea hea hea"
-        "sta sta sta im1"
-        "eff eff im2 im3"
-        "evs evs upe upe"
-        "spr spr im4 im5"
-        "res res res res";
+        ". sta sta sta im1 ."
+        ". eff eff im2 im3 ."
+        ". evs evs upe upe ."
+        ". spr spr im4 im5 ."
+        ". res res res res .";
 }
 
 /***************** *****************/
@@ -64,41 +59,39 @@ main {
 Media Queries Start Here
 *****************/
 @media only screen and (max-width: 1035px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-rows: repeat(8, max-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea"
-        "sta im1"
-        "eff eff"
-        "im2 im3"
-        "evs evs"
-        "upe upe"
-        "spr spr"
-        "im4 im5"
-        "res res";
+        ". sta im1 ."
+        ". eff eff ."
+        ". im2 im3 ."
+        ". evs evs ."
+        ". upe upe ."
+        ". spr spr ."
+        ". im4 im5 ."
+        ". res res .";
 }
 }
 @media only screen and (max-width: 600px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
+    grid-template-rows: repeat(11, min-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea"
-        "sta"
-        "im1"
-        "eff"
-        "im2"
-        "im3"
-        "evs"
-        "upe"
-        "spr"
-        "im4"
-        "im5"
-        "res";
+        ". sta ."
+        ". im1 ."
+        ". eff ."
+        ". im2 ."
+        ". im3 ."
+        ". evs ."
+        ". upe ."
+        ". spr ."
+        ". im4 ."
+        ". im5 ."
+        ". res .";
 }
 }

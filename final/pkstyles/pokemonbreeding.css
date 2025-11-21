@@ -1,5 +1,38 @@
-header {
-    grid-area: hea;
+:root {
+    --tabletitlebackground:  rgb(74, 119, 60);
+    --tabletitlebordercolor: rgb(61, 95, 50);
+    --tabletdcolor: rgb(28, 28, 28);
+    --tablefirstchildcolor:rgb(35, 35, 35);
+    --tablelastchildcolor:rgb(45, 45, 45);
+}
+#ivtable {
+    border-collapse: collapse;
+    color: var(--whitecolor);
+    border-radius: 6px;
+    width: 100%;
+}
+
+#ivtable .title {
+    background: var(--tabletitlebackground);
+    border-bottom: 2px solid var(--tabletitlebordercolor);
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ivtable th {
+    background: var(--tabletitlebordercolor); 
+    padding: 0.75em;
+}
+#ivtable td {
+    padding: 0.5em;  
+    border-top: 1px solid var(--tabletdcolor); 
+}
+#ivtable td:first-child {
+    background: var(--tablefirstchildcolor);
+}
+#ivtable td:last-child {
+    background: var(--tablelastchildcolor);
 }
 
 #overview {
@@ -57,19 +90,18 @@ header {
     grid-area: im8;
 }
 
-main {
+#gridcontainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+    grid-template-rows: repeat(6, max-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea hea hea"
-        "ove ove ove im1"
-        "jud jud im2 im3"
-        "bbr bbr im4 im5"
-        "ntb ntb ntb im6"
-        "hat hat im7 im8"
-        "res res res res";
+        ". ove ove ove im1 ."
+        ". jud jud im2 im3 ."
+        ". bbr bbr im4 im5 ."
+        ". ntb ntb ntb im6 ."
+        ". hat hat im7 im8 ."
+        ". res res res res .";
 }
 
 /***************** *****************/
@@ -77,68 +109,65 @@ main {
 Media Queries Start Here
 *****************/
 @media only screen and (max-width: 1030px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-rows: repeat(9, max-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea"
-        "ove im1"
-        "jud jud"
-        "im2 im3"
-        "bbr bbr"
-        "im4 im5"
-        "ntb im6"
-        "hat hat"
-        "im7 im8"
-        "res res";
+        ". ove im1 ."
+        ". jud jud ."
+        ". im2 im3 ."
+        ". bbr bbr ."
+        ". im4 im5 ."
+        ". ntb im6 ."
+        ". hat hat ."
+        ". im7 im8 ."
+        ". res res .";
 }
 }
 
 @media only screen and (max-width: 770px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 0.1fr repeat(2, 1fr) 0.1fr;
+    grid-template-rows: repeat(11, min-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea hea"
-        "ove ove"
-        "im1 im1"
-        "jud jud"
-        "im2 im3"
-        "bbr bbr"
-        "im4 im5"
-        "ntb ntb"
-        "im6 im6"
-        "hat hat"
-        "im7 im8"
-        "res res";
+        ". ove ove ."
+        ". im1 im1 ."
+        ". jud jud ."
+        ". im2 im3 ."
+        ". bbr bbr ."
+        ". im4 im5 ."
+        ". ntb ntb ."
+        ". im6 im6 ."
+        ". hat hat ."
+        ". im7 im8 ."
+        ". res res .";
 }
 }
 
 @media only screen and (max-width: 770px) {
-    main {
+    #gridcontainer {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
+    grid-template-rows: repeat(14, min-content);
     grid-gap: 1em;
     grid-template-areas:
-        "hea"
-        "ove"
-        "im1"
-        "jud"
-        "im2"
-        "im3"
-        "bbr"
-        "im4"
-        "im5"
-        "ntb"
-        "im6"
-        "hat"
-        "im7"
-        "im8"
-        "res";
+        ". ove ."
+        ". im1 ."
+        ". jud ."
+        ". im2 ."
+        ". im3 ."
+        ". bbr ."
+        ". im4 ."
+        ". im5 ."
+        ". ntb ."
+        ". im6 ."
+        ". hat ."
+        ". im7 ."
+        ". im8 ."
+        ". res .";
 }
 }

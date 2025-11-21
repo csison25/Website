@@ -14,7 +14,9 @@
     --slicknavmenutextcolor: rgb(255, 255, 255);
     --whitecolor: rgb(255, 255, 255);
     --blackcolor: rgb(0, 0, 0);
+    --divareacolor: rgb(215, 215, 215);
 }
+
 /*****************************
     THIS STYLE PAGE IS THE STRUCTURE PAGE FOR THE OTHER PAGES
         LINKED TO THESE HTML(s): 
@@ -52,25 +54,47 @@ h1 {
     font-variant: small-caps;
     text-align: center;
 }
+
 h2,
 h3 {
     /*Combination Selector (Multiple Selector), all listed tags will have this styling applied to them*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
-    text-align: center;
-    font-size: 175%;
 }
+
 h2 {
-    text-align: left;
+    font-size: 150%;
+}
+
+p {
+    line-height: 2em;
+    font-size: 1.2em;
+    font-family: "Gabarito", sans-serif;
+}
+
+ul li {
+    font-family: "Gabarito", sans-serif;
 }
 
 footer {
     /*Type Selector, Styles the <footer> tag*/
     background-color: var(--footerbackgroundcolor);
     color: var(--footertextcolor);
+    margin-top: 1em;
     padding: 1.25em;
     text-align: center;
+}
+
+/*****************
+    classes that applies to all pages in final project
+*****************/
+
+.divborder {
+    background-color: var(--divareacolor);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
 }
 
 /*****************
@@ -80,14 +104,16 @@ footer {
 .oswald-font {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; /*Use a value from 100 to 900*/
+    font-weight: 400;
+    /*Use a value from 100 to 900*/
     font-style: normal;
 }
 
 .sour-gummy-font {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300; /*Use a value from 100 to 900*/
+    font-weight: 300;
+    /*Use a value from 100 to 900*/
     font-style: normal;
     font-variation-settings:
         "wdth" 125;
@@ -96,50 +122,65 @@ footer {
 .gabarito-font {
     font-family: "Gabarito", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; /*Use a value from 100 to 900*/
+    font-weight: 400;
+    /*Use a value from 100 to 900*/
     font-style: normal;
 }
 
 /*****************
     nav_menu CSS
 *****************/
-#dontshow { /*Makes the submenu button for Herpetoculture not show, Visible via media query*/
+#dontshow {
+    /*Makes the submenu button for Herpetoculture not show, Visible via media query*/
     display: none;
 }
+
 #nav_menu {
     margin: auto;
     width: 100%;
 }
 
 #nav_menu ul {
-    display: flex; /*Makes the navmenu act as a flexbox, below are the stylings for the flexbox*/
-    flex-basis: 100%; /*Makes the flexbox take up the whole width of the page*/
-    justify-content: space-around; /*Allocates space evenly between flex items with half-size spaces before the first item and after the last item*/
+    display: flex;
+    /*Makes the navmenu act as a flexbox, below are the stylings for the flexbox*/
+    flex-basis: 100%;
+    /*Makes the flexbox take up the whole width of the page*/
+    justify-content: space-around;
+    /*Allocates space evenly between flex items with half-size spaces before the first item and after the last item*/
     list-style-type: none;
     position: relative;
 }
 
 #nav_menu ul li {
-    flex-basis: 20%; /*Makes the contents of the flexbox take up 25% of the set parent that the flexbox was declared in*/
+    flex-basis: 20%;
+    /*Makes the contents of the flexbox take up 25% of the set parent that the flexbox was declared in*/
 }
 
-#nav_menu ul ul { 
-    display: none; /* Don't display submenus until hover of li */
-    position: absolute; /*Makes the nested ul take position aboslutely where it is declared in space below the item it is nested in*/
+#nav_menu ul ul {
+    display: none;
+    /* Don't display submenus until hover of li */
+    position: absolute;
+    /*Makes the nested ul take position aboslutely where it is declared in space below the item it is nested in*/
 }
 
-#nav_menu ul ul li {  /* Display submenus vertically Subpages: Herpetoculture (ONLY visible on mobile), Gallery page*/ 
-    float: none; 
-} 
-
-#nav_menu ul li:hover > ul { /* Select ul child of li element */
-    display: block; /* Display submenu on hover of li element */
-    width: 19.9%; /*MUST BE THE SAME AS THE FLEX-BASIS on nav_menu ul li {} Line: 129, Makes the <li> item display as 25% of width of page*/
+#nav_menu ul ul li {
+    /* Display submenus vertically Subpages: Herpetoculture (ONLY visible on mobile), Gallery page*/
+    float: none;
 }
 
-#nav_menu > ul::after { 
-    content: ""; /* Add empty content to the end of the first ul */
-    display: block; /* Display that content as a block element */
+#nav_menu ul li:hover>ul {
+    /* Select ul child of li element */
+    display: block;
+    /* Display submenu on hover of li element */
+    width: 19.9%;
+    /*MUST BE THE SAME AS THE FLEX-BASIS on nav_menu ul li {} Line: 129, Makes the <li> item display as 25% of width of page*/
+}
+
+#nav_menu>ul::after {
+    content: "";
+    /* Add empty content to the end of the first ul */
+    display: block;
+    /* Display that content as a block element */
 }
 
 #nav_menu ul li a {
@@ -157,15 +198,18 @@ footer {
     background-color: var(--nav_hover_color);
 }
 
-#nav_menu ul li a.lastitem { /*Takes the border off the right of the last navmenu item*/
+#nav_menu ul li a.lastitem {
+    /*Takes the border off the right of the last navmenu item*/
     border-right: none;
 }
 
-#nav_menu ul li a.current { /*Makes the menu button for the page that is being displayed change color to indicate user is viewing that page*/
+#nav_menu ul li a.current {
+    /*Makes the menu button for the page that is being displayed change color to indicate user is viewing that page*/
     background-color: var(--nav_hover_color);
 }
 
-#mobile_menu { /*Mobile menu not visible, done on purpose, only visible when display is changed in a media query*/
+#mobile_menu {
+    /*Mobile menu not visible, done on purpose, only visible when display is changed in a media query*/
     display: none;
 }
 
@@ -184,14 +228,23 @@ Media Queries Start Here
     #mobile_menu {
         display: block;
     }
+
     nav#mobile_menu a[href] {
         color: var(--slicknavmenutextcolor);
     }
+
     .slicknav_menu {
         background-color: var(--slicknavmenucolor);
         /* Can put, !important HERE if you want */
     }
+
     #dontshow {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    p {
+        font-size: 1em;
     }
 }
