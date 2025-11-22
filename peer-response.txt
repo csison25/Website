@@ -1,0 +1,52 @@
+Ryan Hughes Suggestsions: 
+    Suggestion #2 - Make the YouTube video open in a new tab, instead of the same page, so readers can 
+    have both the YouTube video open and my webpage.
+        This is on my herptoculture.html page, where I talk about how I got into reptile keeping
+        Changes:
+            Adding target="_blank" to the <a> tag
+            Previous coded <a> tag: <a href="https://www.youtube.com/c/TheDarkDen/featuredv"> 
+            Changed <a> tag: <a href="https://www.youtube.com/c/TheDarkDen/featuredv" target="_blank">
+                Adding the target="_blank" has the link open on a new browser tab
+
+    Suggestion #3: - I think this tab could use a little bit more spacing with the image, and the text below the header.
+        Here he is referring to the image on my pinpong.html page. How I interpreted is that the image needs to have more
+        spacing regarding to the text that surrounds it, so I think he means the text is getting too close to the image.
+        So I added more margin/padding around the image to give it more space from the surrounding text. 
+        Changes: 
+            Previous CSS styling for the image: 
+                #rulesimg { /*Floats this img to the left*/
+                    float: left;
+                    width: 40%;
+                    margin-right: 3em;
+                    margin-bottom: 2em;
+                    min-width: 250px;
+                }
+            Changed CSS styling for the image: 
+                #rulesimg { /*Floats this img to the left*/
+                float: left;
+                width: 40%;
+                margin-right: 4em; /* larger margin here*/
+                margin-bottom: 2em;
+                min-width: 250px;
+                }
+
+                #intro {
+                    margin-top: 2em;
+                } /*Added this id to the section the image and <p> tag sit in, and made it even on both the top and bottom
+                    of the section, for equal spacing*/
+Aidrin Morris Suggestion: 
+    Suggestion #1: 
+        Hey CJ, fantastic website! Everything is excellent; it's easy to read and navigate, and it was fun to explore. 
+        The only issue I can really find is that the links are slightly hard to see against the pink background, but 
+        besides that, two thumbs up!
+        Changes: 
+            Made the links easier to see by darkening the color, before it was a lavender purple-y color on the red-pink
+            background. Now its a darker shade of blue. I also noticed that the set color I put on my <a href> also affected
+            my links on the mobile nav menu, so I also made those links white to match the rest of the look for the mobile
+            nav menu.
+        I also implemented those changes when I read the comment, so I do not have a before-and-after of the change. But
+        the original color is visible on his post on the Discussion board. 
+            Changed code: 
+                --link_color: rgb(0, 47, 201); This is on my structure.css page, which is the page I use apply a general
+                styling to all the pages of the "Cj's Webpage" website. 
+

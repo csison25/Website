@@ -51,9 +51,13 @@ h1 {
 #rulesimg { /*Floats this img to the left*/
     float: left;
     width: 40%;
-    margin-right: 3em;
+    margin-right: 4em;
     margin-bottom: 2em;
     min-width: 250px;
+}
+
+#intro {
+    margin-top: 2em;
 }
 
 #rulespara { /*Makes the <p> this ID is on, take up 100% of the width of its container*/
@@ -111,7 +115,7 @@ Media Queries Start Here
 
 @media only screen and (max-width: 1220px) {
     div#rulespara>p {
-        font-size: 300%
+        font-size: 350%
     }
 }
 
@@ -119,19 +123,22 @@ Media Queries Start Here
     h1 {
         font-size: 300%
     }
+    div#rulespara>p {
+        font-size: 300%
+    }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 950px) {
     div#rulespara>p {
-        font-size: 200%;
+        font-size: 250%;
     }
 
     #rulesintroh2 {
-        font-size: 235%;
+        font-size: 250%;
     }
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 820px) {
     h1 {
         font-size: 200%;
         padding-bottom: 0;
@@ -145,29 +152,36 @@ Media Queries Start Here
             1.5px 1.5px 0 black;
             /* Bottom-right shadow */
     }
+    div#rulespara>p {
+        font-size: 250%;
+    }
+}
+@media only screen and (max-width: 815px) {
+    div#rulespara>p {
+        font-size: 200%;
+    }
 }
 
-@media only screen and (max-width: 610px) {
-    div#rulespara>p {
-        font-size: 150%;
-    }
-
+@media only screen and (max-width: 653px) {
     #rulesintroh2 {
         font-size: 200%;
     }
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 624px) {
     #rulesimg {
         float: none; /*makes the img no longer be floated at this viewport width*/
         margin: auto;
     }
-
-    div#rulespara>p {
-        font-size: 200%;
+     div#rulespara>p {
+        font-size: 150%;
+    }
+    #summaryintrotext {
+    font-size: 150%;
     }
     #summaryintropara {
     font-size: 100%;
+}
 }
 #listofrules p {
     margin-left: 0.5em;
