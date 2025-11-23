@@ -1,3 +1,42 @@
+header {
+    background-image: url("../../pictures/pokemonpics/tyranitarscary.jpg");
+    background-repeat: no-repeat;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 25%;
+}
+
+
+h1 {
+    color: var(--whitecolor);
+    padding-top: 0.5em;
+    font-size: 400%;
+    font-style: oblique;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    text-shadow:
+        -2px -2px 0 black,
+        /* Top-left shadow */
+        2px -2px 0 black,
+        /* Top-right shadow */
+        -2px 2px 0 black,
+        /* Bottom-left shadow */
+        2px 2px 0 black;
+    /* Bottom-right shadow */
+}
+
+img {
+    min-width: 300px;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
 #stats {
     grid-area: sta;
 }
@@ -5,6 +44,7 @@
 #effectstats {
     grid-area: eff;
 }
+
 #effortvalues {
     grid-area: evs;
 }
@@ -25,10 +65,6 @@
     grid-area: im1;
 }
 
-#img2 {
-    grid-area: im2;
-}
-
 #img3 {
     grid-area: im3;
 }
@@ -45,10 +81,10 @@
     display: grid;
     grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
     grid-template-rows: repeat(5, max-content);
-    grid-gap: 1em;
+    grid-gap: 2em;
     grid-template-areas:
         ". sta sta sta im1 ."
-        ". eff eff im2 im3 ."
+        ". eff eff eff im3 ."
         ". evs evs upe upe ."
         ". spr spr im4 im5 ."
         ". res res res res .";
@@ -58,40 +94,68 @@
 /*****************
 Media Queries Start Here
 *****************/
-@media only screen and (max-width: 1035px) {
+@media only screen and (max-width: 1270px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
-    grid-template-rows: repeat(8, max-content);
-    grid-gap: 1em;
-    grid-template-areas:
-        ". sta im1 ."
-        ". eff eff ."
-        ". im2 im3 ."
-        ". evs evs ."
-        ". upe upe ."
-        ". spr spr ."
-        ". im4 im5 ."
-        ". res res .";
+        grid-template-rows: repeat(8, max-content);
+        grid-template-areas:
+            ". sta sta sta sta ."
+            ". . im1 im1 . ."
+            ". eff eff eff eff ."
+            ". . im3 im3 . ."
+            ". evs evs evs evs ."
+            ". upe upe upe upe ."
+            ". im4 im4 im5 im5 ."
+            ". spr spr spr spr ."
+            ". res res res res .";
+    }
+    h1 {
+        font-size:350%;
+    }
 }
+
+@media only screen and (max-width: 1270px) {
+    h1 {
+        font-size:300%;
+    }
 }
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 900px) {
+    img {
+        min-width: 200px;
+    }
+    h1 {
+        font-size:250%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
-    grid-template-rows: repeat(11, min-content);
-    grid-gap: 1em;
-    grid-template-areas:
-        ". sta ."
-        ". im1 ."
-        ". eff ."
-        ". im2 ."
-        ". im3 ."
-        ". evs ."
-        ". upe ."
-        ". spr ."
-        ". im4 ."
-        ". im5 ."
-        ". res .";
+        display: grid;
+        grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
+        grid-template-rows: repeat(10, min-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". sta ."
+            ". im1 ."
+            ". eff ."
+            ". evs ."
+            ". im3 ."
+            ". upe ."
+            ". im4 ."
+            ". spr ."
+            ". im5 ."
+            ". res .";
+    }
 }
+
+@media only screen and (max-width: 530px) {
+    h1 {
+        font-size:200%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .flexcontainer {
+        flex-direction: column;
+    }
 }

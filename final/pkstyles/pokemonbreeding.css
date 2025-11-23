@@ -1,10 +1,40 @@
 :root {
-    --tabletitlebackground:  rgb(74, 119, 60);
+    --tabletitlebackground: rgb(74, 119, 60);
     --tabletitlebordercolor: rgb(61, 95, 50);
     --tabletdcolor: rgb(28, 28, 28);
-    --tablefirstchildcolor:rgb(35, 35, 35);
-    --tablelastchildcolor:rgb(45, 45, 45);
+    --tablefirstchildcolor: rgb(35, 35, 35);
+    --tablelastchildcolor: rgb(45, 45, 45);
 }
+
+header {
+    background-image: url("../../pictures/pokemonpics/feraligatr.jpg");
+    background-repeat: no-repeat;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 60%;
+}
+
+
+h1 {
+    color: var(--whitecolor);
+    padding-top: 0.5em;
+    font-size: 350%;
+    font-style: oblique;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    text-shadow:
+        -2px -2px 0 black,
+        /* Top-left shadow */
+        2px -2px 0 black,
+        /* Top-right shadow */
+        -2px 2px 0 black,
+        /* Bottom-left shadow */
+        2px 2px 0 black;
+    /* Bottom-right shadow */
+}
+
 #ivtable {
     border-collapse: collapse;
     color: var(--whitecolor);
@@ -21,16 +51,19 @@
 }
 
 #ivtable th {
-    background: var(--tabletitlebordercolor); 
+    background: var(--tabletitlebordercolor);
     padding: 0.75em;
 }
+
 #ivtable td {
-    padding: 0.5em;  
-    border-top: 1px solid var(--tabletdcolor); 
+    padding: 0.5em;
+    border-top: 1px solid var(--tabletdcolor);
 }
+
 #ivtable td:first-child {
     background: var(--tablefirstchildcolor);
 }
+
 #ivtable td:last-child {
     background: var(--tablelastchildcolor);
 }
@@ -86,6 +119,7 @@
 #img7 {
     grid-area: im7;
 }
+
 #img8 {
     grid-area: im8;
 }
@@ -110,64 +144,76 @@ Media Queries Start Here
 *****************/
 @media only screen and (max-width: 1030px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
-    grid-template-rows: repeat(9, max-content);
-    grid-gap: 1em;
-    grid-template-areas:
-        ". ove im1 ."
-        ". jud jud ."
-        ". im2 im3 ."
-        ". bbr bbr ."
-        ". im4 im5 ."
-        ". ntb im6 ."
-        ". hat hat ."
-        ". im7 im8 ."
-        ". res res .";
+        display: grid;
+        grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+        grid-template-rows: repeat(9, max-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". ove im1 ."
+            ". jud jud ."
+            ". im2 im3 ."
+            ". bbr bbr ."
+            ". im4 im5 ."
+            ". ntb im6 ."
+            ". hat hat ."
+            ". im7 im8 ."
+            ". res res .";
+    }
+    h1 {
+        font-size: 300%;
+    }
 }
+
+@media only screen and (max-width: 900px) {
+     h1 {
+        font-size: 250%;
+    }
 }
 
 @media only screen and (max-width: 770px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.1fr repeat(2, 1fr) 0.1fr;
-    grid-template-rows: repeat(11, min-content);
-    grid-gap: 1em;
-    grid-template-areas:
-        ". ove ove ."
-        ". im1 im1 ."
-        ". jud jud ."
-        ". im2 im3 ."
-        ". bbr bbr ."
-        ". im4 im5 ."
-        ". ntb ntb ."
-        ". im6 im6 ."
-        ". hat hat ."
-        ". im7 im8 ."
-        ". res res .";
-}
+        display: grid;
+        grid-template-columns: 0.1fr repeat(2, 1fr) 0.1fr;
+        grid-template-rows: repeat(11, min-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". ove ove ."
+            ". im1 im1 ."
+            ". jud jud ."
+            ". im2 im3 ."
+            ". bbr bbr ."
+            ". im4 im5 ."
+            ". ntb ntb ."
+            ". im6 im6 ."
+            ". hat hat ."
+            ". im7 im8 ."
+            ". res res .";
+    }
+    h1 {
+        font-size: 200%;
+    }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 481px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
-    grid-template-rows: repeat(14, min-content);
-    grid-gap: 1em;
-    grid-template-areas:
-        ". ove ."
-        ". im1 ."
-        ". jud ."
-        ". im2 ."
-        ". im3 ."
-        ". bbr ."
-        ". im4 ."
-        ". im5 ."
-        ". ntb ."
-        ". im6 ."
-        ". hat ."
-        ". im7 ."
-        ". im8 ."
-        ". res .";
-}
+        display: grid;
+        grid-template-columns: 0.1fr repeat(1, 1fr) 0.1fr;
+        grid-template-rows: repeat(14, min-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". ove ."
+            ". im1 ."
+            ". jud ."
+            ". im2 ."
+            ". im3 ."
+            ". bbr ."
+            ". im4 ."
+            ". im5 ."
+            ". ntb ."
+            ". im6 ."
+            ". hat ."
+            ". im7 ."
+            ". im8 ."
+            ". res .";
+    }
 }

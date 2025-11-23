@@ -6,11 +6,8 @@
 header {
     background-image: url("../../pictures/pokemonpics/rotomphonespark.jpg");
     background-repeat: no-repeat;
-    border-bottom: 5px solid var(--blackcolor);
-    border-top: 2px solid var(--blackcolor);
-    margin-bottom: 1em;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-top: 4em;
+    padding-bottom: 4em;
     background-size: cover;
     background-position: center center;
 }

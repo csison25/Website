@@ -42,7 +42,11 @@ a[href]:hover {
     color: var(--link_hover_color);
 
 }
-
+header {
+    margin-bottom: 2em;
+    border-bottom: 5px solid var(--blackcolor);
+    border-top: 2px solid var(--blackcolor);
+}
 body {
     /*Styling that applies to the body, this is the background for the body*/
     background-color: var(--backgroundcolor);
@@ -81,6 +85,18 @@ img {
     width: 100%;
 }
 
+figure {
+    justify-self: center;
+}
+
+figcaption {
+    background-color: var(--blackcolor);
+    color: var(--whitecolor);
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
 footer {
     /*Type Selector, Styles the <footer> tag*/
     background-color: var(--footerbackgroundcolor);
@@ -99,6 +115,12 @@ footer {
     padding: 1em;
     border-radius: 1em;
     box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
+}
+
+.ulpadding {
+    padding-left: 2.5em;
+    line-height: 2em;
+    font-size: 1.2rem;
 }
 
 /*****************
@@ -251,4 +273,9 @@ Media Queries Start Here
     p {
         font-size: 1em;
     }
+
+    .ulpadding {
+        font-size: 1rem;
+    }
+
 }
