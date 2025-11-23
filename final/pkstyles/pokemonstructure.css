@@ -77,6 +77,10 @@ ul li {
     font-family: "Gabarito", sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 footer {
     /*Type Selector, Styles the <footer> tag*/
     background-color: var(--footerbackgroundcolor);

@@ -1,78 +1,124 @@
-#overview {
-    grid-area: ove;
+header {
+    background-image: url("../../pictures/pokemonpics/rankedbattlescreen.jpg");
+    background-repeat: no-repeat;
+    border-bottom: 5px solid var(--blackcolor);
+    border-top: 2px solid var(--blackcolor);
+    margin-bottom: 1em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background-size: cover;
+    background-position-y: 35%;
 }
-#whatisvgc{
+
+h1 {
+    color: var(--whitecolor);
+    padding-top: 0.5em;
+    font-size: 300%;
+    font-style: oblique;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    text-shadow:
+        -2px -2px 0 black,
+        /* Top-left shadow */
+        2px -2px 0 black,
+        /* Top-right shadow */
+        -2px 2px 0 black,
+        /* Bottom-left shadow */
+        2px 2px 0 black;
+    /* Bottom-right shadow */
+}
+
+.paddinglandr {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.ulpadding {
+    padding-left: 2.5em;
+    line-height: 2em;
+    font-size: 1.2rem;
+}
+
+#whatisvgc {
     grid-area: vgc;
 }
+
 #whydoubles {
     grid-area: dou;
 }
+
 #rules {
     grid-area: rul;
 }
+
 #regulations {
     grid-area: reg
 }
+
 #resource {
     grid-area: res;
 }
+
 #img1 {
     grid-area: im1;
 }
+
 #img2 {
     grid-area: im2;
 }
-#img3 {
-    grid-area: im3;
-}
+
 #gridcontainer {
     display: grid;
     grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
-    grid-template-rows: repeat(5, max-content);
+    grid-template-rows: repeat(4, max-content);
     grid-gap: 1em;
-    grid-template-areas: 
-        ". ove ove ove ove ove ove ."
-        ". im1 im1 vgc vgc vgc vgc ."
-        ". im2 im2 dou dou dou dou ."
-        ". im3 im3 rul rul reg reg ."
+    grid-template-areas:
+        ". vgc vgc vgc vgc vgc vgc ."
+        ". im2 im2 im2 im1 im1 im1 ."
+        ". dou dou dou dou dou dou ."
+        ". rul rul rul reg reg reg ."
         ". res res res res res res .";
 }
+
 /***************** *****************/
 /*****************
 Media Queries Start Here
 *****************/
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1200px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
-    grid-template-rows: repeat(8, max-content);
-    grid-gap: 1em;
-    grid-template-areas: 
-        ". ove ove ."
-        ". vgc vgc ."
-        ". im1 im1 ." 
-        ". dou dou ."
-        ". im2 im2 ."
-        ". rul reg ."
-        ". im3 im3 ."
-        ". res res .";
+        display: grid;
+        grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+        grid-template-rows: repeat(6, max-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". vgc vgc ."
+            ". im1 im1 ."
+            ". dou dou ."
+            ". im2 im2 ."
+            ". rul reg ."
+            ". res res .";
+    }
 }
-}
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 1130px) {
     #gridcontainer {
-    display: grid;
-    grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
-    grid-template-rows: repeat(9, min-content);
-    grid-gap: 1em;
-    grid-template-areas: 
-        ". ove ."
-        ". vgc ."
-        ". im1 ." 
-        ". dou ."
-        ". im2 ."
-        ". rul ."
-        ". im3 ."
-        ". reg ."
-        ". res .";
+        display: grid;
+        grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
+        grid-template-rows: repeat(7, min-content);
+        grid-gap: 1em;
+        grid-template-areas:
+            ". vgc ."
+            ". im1 ."
+            ". dou ."
+            ". im2 ."
+            ". rul ."
+            ". reg ."
+            ". res .";
+    }
 }
+
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 200%;
+    }
 }
