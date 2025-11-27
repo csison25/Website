@@ -50,6 +50,39 @@ img {
     grid-area: cho;
 }
 
+#choosetitle {
+    grid-area: tit;
+}
+
+#core {
+    grid-area: cor;
+}
+
+#coreideas {
+    grid-area: ide;
+}
+
+#roles {
+    grid-area: rol;
+}
+
+#img1 {
+    grid-area: im1;
+    place-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#listgridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+        "tit tit im1 "
+        "cor rol im1";
+        grid-column-gap: 1.5em;
+}
+
 #listflexcontainer {
     display: flex;
     flex-direction: row;
@@ -160,26 +193,18 @@ Media Queries Start Here
             ". ter ter ter ter ter ."
             ". im6 im6 . im7 im7 ."
             ". res res res res res .";
+
     }
 
-    #core {
-        order: 1
-    }
-
-    #img1 {
-        order: 2
-    }
-
-    #roles {
-        order: 3
-    }
-
-    #listflexcontainer {
-        flex-direction: column;
-    }
-
-    .listflexitem {
-        flex-basis: 100%;
+    #listgridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, min-content);
+        grid-template-areas:
+            "tit tit tit "
+            "cor cor cor "
+            ". im1 ."
+            "rol rol rol ";
     }
 }
 

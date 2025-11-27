@@ -30,12 +30,6 @@ h1 {
     padding-right: 1.5em;
 }
 
-.ulpadding {
-    padding-left: 2.5em;
-    line-height: 2em;
-    font-size: 1.2rem;
-}
-
 #whatisvgc {
     grid-area: vgc;
 }
