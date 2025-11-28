@@ -113,7 +113,7 @@ img {
     display: grid;
     grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
     grid-template-rows: repeat(5, min-content);
-    grid-gap: 2em;
+    grid-gap: 2.5em;
     grid-template-areas:
         ". sta sta sta im1 ."
         ". eff eff eff im3 ."
@@ -133,7 +133,6 @@ Media Queries Start Here
         display: grid;
         grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
         grid-template-rows: repeat(5, min-content);
-        grid-gap: 2em;
         grid-template-areas:
             ". sta sta sta im1 ."
             ". eff eff eff eff ."
@@ -188,7 +187,6 @@ Media Queries Start Here
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.1fr;
         grid-template-rows: repeat(10, min-content);
-        grid-gap: 1em;
         grid-template-areas:
             ". sta ."
             ". im1 ."

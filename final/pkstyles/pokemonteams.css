@@ -247,7 +247,6 @@ Media Queries Start Here
         display: grid;
         grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
         grid-template-rows: repeat(13, min-content);
-        grid-gap: 2em;
         grid-template-areas:
             ". ove ."
             ". che ."
