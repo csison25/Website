@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Pokemon Breeding Page -->
+<!-- Pokémon Breeding Page -->
 <html lang="en">
 
 <head>
@@ -29,7 +29,7 @@
         $(document).ready(function () {
             $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
         }); </script>
-    <title>Pokemon VGC</title> <!--title of webpage, shows in browser tab-->
+    <title>Pokémon VGC</title> <!--title of webpage, shows in browser tab-->
 </head>
 
 <body>
@@ -51,19 +51,48 @@
             <li><a class="lastitem current" href="../final/pokemonbreeding.html"><i class="fa-solid fa-dna"></i>
                     Breeding</a>
             </li>
-
         </ul>
     </nav>
     <header>
-        <img scr="" alt="">
-        <h1>Breeding Competitive Pokemon</h1>
+        <h1>Breeding Competitive Pokémon</h1>
     </header>
     <main>
-        <section id="gridcontainer">
-            <div id="overview">
-                <p>Why Breed Pokemon?</p>
+        <section id="gridcontainer"><!--Grid starts here-->
+            <div id="overview" class="divborder">
+                <h2>Why Breed Pokémon?</h2>
+                <p>
+                    Breeding gives players full control. Instead of depending on luck with a wild-caught Pokémon, you
+                    can breed for specific stats, nature, ability, and moves. This level of control is especially
+                    valuable in ensuring your team is consistent and reliable in competitive play. In VGC, the
+                    difference between winning and losing is razor-thin: a single speed point, a nature that boosts the
+                    right stat, or an inherited egg move that enables a key strategy. Breeding enables consistency,
+                    allowing players to build strategies with confidence and predict outcomes more accurately. It's like
+                    building your own dream athletes from the ground up!
+                </p>
             </div>
-            <div id="img1">
+            <div id="ivsexplain" class="divborder">
+                <h2>What are IVs</h2>
+                <p>IVs (Individual Values) are hidden numbers for each stat:</p>
+                <section class="flexcontainer"><!--Flex box here-->
+                    <ul class="ulpadding"><!--Flex item 1-->
+                        <li>HP</li>
+                        <li>Attack</li>
+                        <li>Defense</li>
+                    </ul>
+                    <ul class="ulpadding"><!--Flex item 2-->
+                        <li>Special Attack</li>
+                        <li>Special Defense</li>
+                        <li>Speed</li>
+                    </ul>
+                </section>
+                <h3>Tip:</h3>
+                <p>Some competitive builds prefer a <em>low</em> IV in a stat</p>
+                <ul class="ulpadding">
+                    <li>Physical Attackers: Don't need Special Attack IVs</li>
+                    <li>Trick Room Teams: Want Pokémon as slow as possible</li>
+                </ul>
+            </div>
+            <div id="table"><!--Table of IVs and their phrases in the Pokemon game-->
                 <table id="ivtable">
                     <thead>
                         <tr>
@@ -102,67 +131,151 @@
                     </tbody>
                 </table>
             </div>
-            <div id="judge">
+            <div id="judge" class="divborder">
                 <h2>IV Judge Function</h2>
-                <p>blah</p>
+                <p>
+                    Once unlocked, usually after beating the main story, the Judge function appears in your PC boxes.
+                    Each stat has a phrase next to it indicating the amount of IVs in that stat. The stats of regularly
+                    caught Pokémon are usually not the "best," highlighting the importance of breeding. This function
+                    allows you to quickly check which parents are ideal for breeding and track progress toward creating
+                    top competitive Pokémon.
+                </p>
             </div>
-            <div id="img2">
-                <img scr="" alt="">
+            <div id="img2" class="divborder">
+                <figure>
+                    <img src="../pictures/pokemonpics/egg.jpg" alt="Picture of a Pokémon egg">
+                    <figcaption>Pokémon Egg</figcaption>
+                </figure>
             </div>
-            <div id="img3">
-                <img scr="" alt="">
+            <div id="img3" class="divborder">
+                <figure>
+                    <img src="../pictures/pokemonpics/tyranitarivs.jpg" alt="Picture of a Tyrantitar's IVs">
+                    <figcaption>Competitive IV Spread</figcaption>
+                </figure>
             </div>
-            <div id="benefitsbreeding">
-                <h2>Benefits of Breeding Pokemon</h2>
-                <p>blah</p>
+            <div id="benefitsbreeding" class="divborder">
+                <h2>Benefits of Breeding Pokémon</h2>
+                <p>Breeding lets players:</p>
+                <ul class="ulpadding">
+                    <li>Optimize stats: Create Pokémon with perfect or near-perfect IVs.</li>
+                    <li>Pass down the correct nature: Pass down natures that suit a Pokémon's role.</li>
+                    <li>Obtain Egg Moves: Get moves that the Pokémon would not otherwise learn through level-up.</li>
+                    <li>Inherit an ability/hidden ability: You need to have a parent with the desired ability.</li>
+                    <li>Create other copies: Once you have excellent parent Pokémon, you can produce additional
+                        offspring for different roles.</li>
+                </ul>
             </div>
-            <div id="img4">
-                <img scr="" alt="">
+            <div id="img4" class="divborder">
+                <figure>
+                    <img src="../pictures/pokemonpics/randompokemonivs.jpg" alt="Wild Caught Pokémon's IVs">
+                    <figcaption>Wild Caught Pokémon's IVs</figcaption>
+                </figure>
             </div>
-            <div id="img5">
-                <img scr="" alt="">
+            <div id="img5" class="divborder">
+                <figure>
+                    <img src="../pictures/pokemonpics/showbreedingitems.jpg"
+                        alt="Picture of a Ditto and a Sandile on a team with needed items for breeding competitive Sandiles.">
+                    <figcaption>Breeding Setup</figcaption>
+                </figure>
             </div>
-            <div id="needstobreed">
+            <div id="needstobreed" class="divborder">
                 <h2>How to Start Breeding</h2>
-                <p>blah</p>
+                <p>This explanation will be for Pokémon Scarlet and Violet; other generations will be the same, but
+                    without the picnic system.</p>
+                <h3>Step-by-step:</h3>
+                <ol class="ulpadding">
+                    <li>Choose a base Pokémon - Catch a wild Pokémon with decent IVs that you want to make competitive.
+                    </li>
+                    <li>Pair it with a good IV partner - usually this would be a high-IV Ditto, and put both Pokémon in
+                        your party.</li>
+                    <li>Equip Item - Give the high-IV partner or Ditto the Destiny Knot. This will ensure that 5IVs from
+                        either partner are passed down.</li>
+                    <li>Set up a Picnic - Start a picnic in-game, wait a little bit, then check the picnic basket for
+                        eggs.</li>
+                    <li>Eat a meal - Make sandwich that provides Egg Power boost. This will increase number of eggs
+                        produced.</li>
+                    <li>Swap out base Pokémon - As you hatch the eggs, switch out the base Pokémon with offspring that
+                        have more optimal IVs <strong>and</strong> nature.
+                    </li>
+                    <li>Equip Item - After you produce an offspring with the desired IVs and nature, equip them with the
+                        Everstone. This guarantees the holder's nature is always inherited.</li>
+                </ol>
             </div>
-            <div id="img6">
-                <img scr="" alt="">
+            <div id="essential" class="divborder">
+                <h2>Essentials:</h2>
+                <ul class="ulpadding">
+                    <li>
+                        Access to the Day Care (Depends on the game)
+                        <ul class="ulpadding">
+                            <li>Pokémon Scarlet and Violet use the Picnic System as the "Day Care," just need two
+                                compatible
+                                Pokémon in your party</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Two compatible Pokémon - Same egg group, or Pokémon + Ditto
+                        <ul class="ulpadding">
+                            <li>For same egg group breeding, the female Pokémon is the base Pokémon (offspring)</li>
+                        </ul>
+                    </li>
+                    <li>Destiny knot - Passes IVs</li>
+                    <li>Everstone - Passes the nature</li>
+                    <li>Flame Body - Pokémon ability, halves amount of steps to hatch an egg</li>
+                    <li>Judge Function - Check IVs</li>
+                </ul>
             </div>
-            <div id="hatching">
+            <div id="hatching" class="divborder">
                 <h2>Hatching Eggs</h2>
-                <p>blah</p>
+                <p>Hatching the eggs is very simple. Put the eggs in your party and move around. To hatch eggs faster:
+                </p>
+                <ul class="ulpadding">
+                    <li>Have a Pokémon with the ability Flame Body or Magma Armor in your party</li>
+                    <li>
+                        Use in-game movement mechanics to increase frequency of steps
+                        <ul class="ulpadding">
+                            <li>Pokémon Scarlet and Violet: Ride Koraidon or Miraidon around Paldea</li>
+                            <li>Previous Generations: Ride the bicycle</li>
+                        </ul>
+                    </li>
+                    <li>Optimize time by choosing routes in the game that allow you to "loop" or are continuous in a
+                        single direction</li>
+                </ul>
             </div>
-            <div id="img7">
-                <img scr="" alt="">
+            <div id="img7" class="divborder">
+                <figure>
+                    <img src="../pictures/pokemonpics/gotanegg.jpg" alt="Player getting a Pokemon egg">
+                    <figcaption>Getting a Pokémon Egg</figcaption>
+                </figure>
             </div>
-            <div id="img8">
-                <img scr="" alt="">
-            </div>
-            <div id="resource">
+            <div id="resource" class="divborder">
+                <h2>More Resources</h2>
                 <p>
                     Find local events near you: <a
                         href="https://events.pokemon.com/EventLocator/?locale=en-US&range=50&startdate=2025-11-19&iskm=false"
-                        target="_blank">Pokémon.com</a>
+                        target="_blank">Pokémon.com</a><!--Opens on new tab-->
                     <br>
                     Test your teams against others: <a href="https://pokemonshowdown.com/" target="_blank">Pokémon
-                        Showdown</a>
+                        Showdown</a><!--Opens on new tab-->
                     <br>
                     Refine your teams output: <a href="https://calc.pokemonshowdown.com/" target="_blank">Damage
-                        Calculator</a>
+                        Calculator</a><!--Opens on new tab-->
                     <br>
                     Rental Teams: <a href="https://victoryroad.pro/sv-rental-teams/" target="_blank">Victory Road</a>
-                    <br>
+                    <br><!--Opens on new tab-->
                     Pokémon encyclopedia: <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page"
-                        target="_blank">Bulbapedia</a>
+                        target="_blank">Bulbapedia</a><!--Opens on new tab-->
                 </p>
             </div>
         </section>
     </main>
     <footer>
-        &copy; Copyright Cj Sison 2025
         <p><a href="#top">Return to Top</a></p> <!--href goes back to top of page-->
-        <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons" target="_blank">Pokemon icons
+        <p>&copy; Copyright Cj Sison 2025</p>
+        <p>I am not the own of this game. This is for educational purposes</p>
+        <p>Screenshots and video gameplay are from Pokémon Violet (2022) and Pokémon Legends: Z-A (2025) captured by Cj Sison</p>
+            <p>All trademarks and game content &copy; Nintendo / Game Freak / The Pokémon Company.</p>
+        <!--Copyright area for Pokemon-->
+        <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons" target="_blank">Pokémon icons
             created by Those Icons
             - Flaticon</a>
     </footer>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Pokemon Teambuilding Page -->
+<!-- Pokémon Teambuilding Page -->
 <html lang="en">
 
 <head>
@@ -29,7 +29,7 @@
         $(document).ready(function () {
             $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
         }); </script>
-    <title>Pokemon VGC</title> <!--title of webpage, shows in browser tab-->
+    <title>Pokémon VGC</title> <!--title of webpage, shows in browser tab-->
 </head>
 
 <body>
@@ -59,9 +59,8 @@
         <h1>Teambuilding</h1>
     </header>
     <main>
-        <section id="gridcontainer">
-            <div id="overview" class="paddinglandr divborder">
-
+        <section id="gridcontainer"><!--Grid starts here-->
+            <div id="overview" class="divborder">
                 <h2>Why Teambuild?</h2>
                 <p>Pokémon VGC battles are filled with strategic decisions. Having a well designed team that functions
                     as a cohesive unit with a clear strategy will help you win battles. Unlike casual play, where you
@@ -77,7 +76,7 @@
                 </ul>
                 </p>
             </div>
-            <div id="checklist" class="paddinglandr divborder">
+            <div id="checklist" class="divborder">
                 <h2>Checklist</h2>
                 <p> Teams are not easy to build. Having a general teambuilding checklist to add structure can sometimes
                     help in choosing teammates. A team should cover these aspects:</p>
@@ -91,7 +90,7 @@
                 </ul>
             </div>
             <div id="howtochoose" class="divborder">
-                <section id="listgridcontainer">
+                <section id="listgridcontainer"><!--Nested Grid for list in section: Choosing your Pokemon, contains four items in the grid-->
                     <div id="choosetitle">
                         <h2>Choosing your Pokémon</h2>
                         <p>When choosing Pokémon, they should fill a role and support your overall strategy.
@@ -127,7 +126,7 @@
                             <li>Defensive answers: Who helps cover weaknesses/top-threats?</li>
                         </ul>
                     </div>
-                    <div id="img1" class="listflexitem">
+                    <div id="img1">
                         <figure>
                             <img src="../pictures/pokemonpics/rankedteam.jpg" alt="Example of a Competitve Team">
                             <figcaption>Ex: Sandstorm Team</figcaption>
@@ -167,25 +166,25 @@
             </div>
             <div id="img2" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/pelipper.jpg" alt="Pokemon Pelipper a weather setter">
-                    <figcaption>Ex: Rain (weather) setter</figcaption>
+                    <img src="../pictures/pokemonpics/pelipper.jpg" alt="Pokémon Pelipper a weather setter">
+                    <figcaption>Ex: Rain (weather) Setter</figcaption>
                 </figure>
             </div>
             <div id="img3" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/hatterene.jpg" alt="Pokemon Hatterene, a trick room setter">
+                    <img src="../pictures/pokemonpics/hatterene.jpg" alt="Pokémon Hatterene, a trick room setter">
                     <figcaption>Ex: Trick Room Setter</figcaption>
                 </figure>
             </div>
             <div id="img4" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/assaultvest.jpg" alt="Pokemon battle item: Assault Vest">
+                    <img src="../pictures/pokemonpics/assaultvest.jpg" alt="Pokémon battle item: Assault Vest">
                     <figcaption>Item: Assault Vest</figcaption>
                 </figure>
             </div>
             <div id="img5" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/Focussash.jpg" alt="Pokemon battle item: Focus Sash">
+                    <img src="../pictures/pokemonpics/Focussash.jpg" alt="Pokémon battle item: Focus Sash">
                     <figcaption>Item: Focus Sash</figcaption>
                 </figure>
             </div>
@@ -245,7 +244,7 @@
                 <ul class="ulpadding">
                     <li>Boosts moves of same tera typing</li>
                     <li>Boosts offensive or defensive capabilities</li>
-                    <li>Can give Pokemon immunities to typings</li>
+                    <li>Can give Pokémon immunities to typings</li>
                     <li>Removes a Pokémon's main weaknesses</li>
                     <li>Great for pivoting strategies</li>
                     <li>Gives your Pokémon surprise resistances</li>
@@ -254,14 +253,14 @@
             </div>
             <div id="img6" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/diffteratype.jpg" alt="Pokemon battle item: Focus Sash">
-                    <figcaption>Ex: Pokemon with a different Tera Type</figcaption>
+                    <img src="../pictures/pokemonpics/diffteratype.jpg" alt="Pokémon battle item: Focus Sash">
+                    <figcaption>Ex: Pokémon with a different Tera type</figcaption>
                 </figure>
             </div>
             <div id="img7" class="divborder imgcenter">
                 <figure>
-                    <img src="../pictures/pokemonpics/sameteratype.jpg" alt="Pokemon battle item: Focus Sash">
-                    <figcaption>Ex: Pokemon with the same Tera type</figcaption>
+                    <img src="../pictures/pokemonpics/sameteratype.jpg" alt="Pokémon battle item: Focus Sash">
+                    <figcaption>Ex: Pokémon with the same Tera type</figcaption>
                 </figure>
             </div>
             <div id="resource" class="divborder">
@@ -269,26 +268,30 @@
                 <p>
                     Find local events near you: <a
                         href="https://events.pokemon.com/EventLocator/?locale=en-US&range=50&startdate=2025-11-19&iskm=false"
-                        target="_blank">Pokémon.com</a>
+                        target="_blank">Pokémon.com</a><!--Opens on new tab-->
                     <br>
                     Test your teams against others: <a href="https://pokemonshowdown.com/" target="_blank">Pokémon
-                        Showdown</a>
+                        Showdown</a><!--Opens on new tab-->
                     <br>
                     Refine your teams output: <a href="https://calc.pokemonshowdown.com/" target="_blank">Damage
-                        Calculator</a>
+                        Calculator</a><!--Opens on new tab-->
                     <br>
                     Rental Teams: <a href="https://victoryroad.pro/sv-rental-teams/" target="_blank">Victory Road</a>
-                    <br>
+                    <br><!--Opens on new tab-->
                     Pokémon encyclopedia: <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page"
-                        target="_blank">Bulbapedia</a>
+                        target="_blank">Bulbapedia</a><!--Opens on new tab-->
                 </p>
             </div>
         </section>
     </main>
     <footer>
-        &copy; Copyright Cj Sison 2025
         <p><a href="#top">Return to Top</a></p> <!--href goes back to top of page-->
-        <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons" target="_blank">Pokemon icons
+        <p>&copy; Copyright Cj Sison 2025</p>
+        <p>I am not the own of this game. This is for educational purposes</p>
+        <p>Screenshots and video gameplay are from Pokémon Violet (2022) and Pokémon Legends: Z-A (2025) captured by Cj Sison</p>
+            <p>All trademarks and game content &copy; Nintendo / Game Freak / The Pokémon Company.</p>
+        <!--Copyright area for Pokemon-->
+        <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons" target="_blank">Pokémon icons
             created by Those Icons
             - Flaticon</a>
     </footer>

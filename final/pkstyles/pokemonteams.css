@@ -1,3 +1,11 @@
+/*****************
+
+    These classes are in the pokemonstructure.css file:
+        .divborder 
+        .ulpadding 
+
+*****************/
+
 header {
     background-image: url("../../pictures/pokemonpics/teambuild.jpg");
     background-repeat: no-repeat;
@@ -9,6 +17,7 @@ header {
 }
 
 h1 {
+    /*Applies the outline to the <h1> tags*/
     color: var(--whitecolor);
     padding-top: 0.5em;
     font-size: 500%;
@@ -16,17 +25,18 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
-        -2px -2px 0 black,
+        -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
-        2px -2px 0 black,
+        2px -2px 0 var(--blackcolor),
         /* Top-right shadow */
-        -2px 2px 0 black,
+        -2px 2px 0 var(--blackcolor),
         /* Bottom-left shadow */
-        2px 2px 0 black;
+        2px 2px 0 var(--blackcolor);
     /* Bottom-right shadow */
 }
 
 img {
+    /*Styling applies to all images on this page*/
     min-width: 200px;
     width: 100%;
     height: 100%;
@@ -34,22 +44,14 @@ img {
 }
 
 .imgcenter {
+    /*images given this class are centered within the container they are in*/
     text-align: center;
     align-content: center;
 }
 
-#overview {
-    grid-area: ove;
-}
-
-#checklist {
-    grid-area: che;
-}
-
-#howtochoose {
-    grid-area: cho;
-}
-
+/*Grid-areas defined below, ARE TWO GRIDS HERE*/
+/*Following four ID selector's grid-area definitions are for the ID: listgridcontainer 
+that is in the <div> ID: howtochoose*/
 #choosetitle {
     grid-area: tit;
 }
@@ -58,15 +60,12 @@ img {
     grid-area: cor;
 }
 
-#coreideas {
-    grid-area: ide;
-}
-
 #roles {
     grid-area: rol;
 }
 
 #img1 {
+    /*image that resides within the <div> ID: howtochoose*/
     grid-area: im1;
     place-content: center;
     margin-top: 1em;
@@ -80,19 +79,20 @@ img {
     grid-template-areas:
         "tit tit im1 "
         "cor rol im1";
-        grid-column-gap: 1.5em;
+    grid-column-gap: 1.5em;
 }
 
-#listflexcontainer {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 100%;
-    gap: 2em;
-    justify-content: space-evenly;
+/*Main Grid-areas defined below*/
+#overview {
+    grid-area: ove;
 }
 
-.listflexitem {
-    flex-basis: 33%;
+#checklist {
+    grid-area: che;
+}
+
+#howtochoose {
+    grid-area: cho;
 }
 
 #strategy {
@@ -114,22 +114,26 @@ img {
 #img2 {
     grid-area: im2;
     justify-self: center;
+    /*Centers the contents in its container*/
 }
 
 
 #img3 {
     grid-area: im3;
     justify-self: center;
+    /*Centers the contents in its container*/
 }
 
 #img4 {
     grid-area: im4;
     justify-self: center;
+    /*Centers the contents in its container*/
 }
 
 #img5 {
     grid-area: im5;
     justify-self: center;
+    /*Centers the contents in its container*/
 }
 
 #img6 {
@@ -141,6 +145,7 @@ img {
 }
 
 #gridcontainer {
+    /*Grid layout*/
     display: grid;
     grid-template-columns: 0.2fr repeat(5, 1fr) 0.2fr;
     grid-template-rows: repeat(9, max-content);
@@ -161,8 +166,10 @@ img {
 /*****************
 Media Queries Start Here
 *****************/
+
 @media only screen and (max-width: 1770px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         grid-template-columns: 0.2fr repeat(2, 1fr) 0.01fr repeat(2, 1fr) 0.2fr;
         grid-template-rows: repeat(9, max-content);
         grid-template-areas:
@@ -180,6 +187,7 @@ Media Queries Start Here
 
 @media only screen and (max-width: 1300px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         grid-template-columns: 0.2fr repeat(2, 1fr) 0.01fr repeat(2, 1fr) 0.2fr;
         grid-template-rows: repeat(9, max-content);
         grid-template-areas:
@@ -197,6 +205,7 @@ Media Queries Start Here
     }
 
     #listgridcontainer {
+        /*Redefined Grid layout (smaller grid in ID: howtochoose)*/
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(3, min-content);
@@ -210,6 +219,7 @@ Media Queries Start Here
 
 @media only screen and (max-width: 1025px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         grid-template-columns: 0.1fr repeat(2, 1fr) 0.1fr;
         grid-template-rows: repeat(11, min-content);
         grid-template-areas:
@@ -233,6 +243,7 @@ Media Queries Start Here
 
 @media only screen and (max-width: 645px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         display: grid;
         grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
         grid-template-rows: repeat(13, min-content);

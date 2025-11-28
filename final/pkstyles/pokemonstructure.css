@@ -1,5 +1,6 @@
 :root {
     /*Custom Properties :root Pseudo-class Selector*/
+    /*Main colors used througout the website*/
     --text_background_color: rgb(87, 122, 209);
     --border_color: rgb(0, 0, 0);
     --link_color: rgb(36, 87, 255);
@@ -18,16 +19,15 @@
 }
 
 /*****************************
-    THIS STYLE PAGE IS THE STRUCTURE PAGE FOR THE OTHER PAGES
+    THIS STYLE PAGE IS THE STRUCTURE PAGE FOR THE OTHER PAGES, STYLINGS HERE ARE GENERAL AND APPLIE TO ALL LINKED HTML(s)
         LINKED TO THESE HTML(s): 
-            index , pingpong ,herptoculture , herpgallery 
+            index.html (final folder) , pokemonvgc.html , pokemonteambuilding.html , pokemontraining.html , pokemonbreeding.html 
 *****************************/
 
 * {
     /*Universal Selector*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /*Font that will apply if nothing is specified for the element*/
-    /*text in the body will be centered*/
     margin: 0;
     padding: 0;
 }
@@ -42,17 +42,20 @@ a[href]:hover {
     color: var(--link_hover_color);
 
 }
+
 header {
     margin-bottom: 2em;
     border-bottom: 5px solid var(--blackcolor);
     border-top: 2px solid var(--blackcolor);
 }
+
 body {
-    /*Styling that applies to the body, this is the background for the body*/
+    /*Styling that applies to the body, applies background of the body*/
     background-color: var(--backgroundcolor);
 }
 
 h1 {
+    /*h1 tags have a different font from the rest of the text*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
@@ -61,7 +64,6 @@ h1 {
 
 h2,
 h3 {
-    /*Combination Selector (Multiple Selector), all listed tags will have this styling applied to them*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-variant: small-caps;
@@ -75,13 +77,21 @@ p {
     line-height: 2em;
     font-size: 1.2em;
     font-family: "Gabarito", sans-serif;
+    /*Google Font*/
 }
 
 ul li {
     font-family: "Gabarito", sans-serif;
+    /*Google Font*/
+}
+
+ol li {
+    font-family: "Gabarito", sans-serif;
+    /*Google Font*/
 }
 
 img {
+    /*Makes images take up 100% of the container they are placed in*/
     width: 100%;
 }
 
@@ -98,7 +108,6 @@ figcaption {
 }
 
 footer {
-    /*Type Selector, Styles the <footer> tag*/
     background-color: var(--footerbackgroundcolor);
     color: var(--footertextcolor);
     margin-top: 1em;

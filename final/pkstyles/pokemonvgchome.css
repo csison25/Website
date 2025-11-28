@@ -1,3 +1,10 @@
+/*****************
+
+    These classes are in the pokemonstructure.css file:
+        .divborder 
+        .ulpadding 
+
+*****************/
 :root {
     --readmorelinkbackground: rgb(173, 173, 162);
     --readmorelinkhoverbackground: rgb(188, 188, 169);
@@ -13,6 +20,7 @@ header {
 }
 
 h1 {
+    /*Applies the outline to the <h1> tags*/
     color: var(--whitecolor);
     padding-top: 0.5em;
     font-size: 400%;
@@ -20,22 +28,24 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
-        -2px -2px 0 black,
+        -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
-        2px -2px 0 black,
+        2px -2px 0 var(--blackcolor),
         /* Top-right shadow */
-        -2px 2px 0 black,
+        -2px 2px 0 var(--blackcolor),
         /* Bottom-left shadow */
-        2px 2px 0 black;
+        2px 2px 0 var(--blackcolor);
     /* Bottom-right shadow */
 
 }
 
+/*Video area: Next two ID selectors are for the video and video area on the page*/
 #videobox {
     grid-area: vid;
     margin-right: 1.25%;
     place-content: center;
 }
+
 #pokemonvideo {
     width: 100%;
     height: auto;
@@ -45,70 +55,44 @@ h1 {
     box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
 }
 
-#overview>h2 {
-    text-align: center;
-}
-
 #overview {
     grid-area: ove;
     text-align: center;
 }
+
+#overview>h2 {
+    /*Centers only the h2 in the Overview section*/
+    text-align: center;
+}
+
+/*The following two classes are for the "Read More" button on the page*/
 .readmorebtn {
     text-align: left;
     margin-top: 1em;
 }
 
-#overviewlink {
+.linkbtn {
     background-color: var(--readmorelinkbackground);
     padding: 0.5em;
     border-radius: 0.75em;
-    
 }
 
-#overviewlink:hover {
+.linkbtn:hover {
+    /*hover for the class: linkbtn, makes th background change colors for the "button"*/
     background-color: var(--readmorelinkhoverbackground);
 }
 
+/*Grid-areas defined below*/
 #team {
     grid-area: tea;
-}
-
-#teamlink {
-    background-color: var(--readmorelinkbackground);
-    padding: 0.5em;
-    border-radius: 0.75em;
-}
-
-#teamlink:hover {
-    background-color: var(--readmorelinkhoverbackground);
 }
 
 #train {
     grid-area: tra;
 }
 
-#traininglink {
-    background-color: var(--readmorelinkbackground);
-    padding: 0.5em;
-    border-radius: 0.75em;
-}
-
-#traininglink:hover {
-    background-color: var(--readmorelinkhoverbackground);
-}
-
 #breed {
     grid-area: bre;
-}
-
-#breedinglink {
-    background-color: var(--readmorelinkbackground);
-    padding: 0.5em;
-    border-radius: 0.75em;
-}
-
-#breedinglink:hover {
-    background-color: var(--readmorelinkhoverbackground);
 }
 
 #resrouce {
@@ -116,6 +100,7 @@ h1 {
 }
 
 #gridcontainer {
+    /*Grid layout*/
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
@@ -132,6 +117,7 @@ h1 {
 /*****************
 Media Queries Start Here
 *****************/
+
 @media only screen and (max-width: 1560px) {
     h1 {
         font-size: 350%;
@@ -140,6 +126,7 @@ Media Queries Start Here
 
 @media only screen and (max-width: 1400px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, min-content);
         grid-template-areas:
@@ -148,13 +135,15 @@ Media Queries Start Here
             "tea tra"
             "bre res";
     }
+
     h1 {
         font-size: 500%;
 
     }
+
     header {
-    padding-top: 2%;
-    padding-bottom: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 }
 
@@ -163,10 +152,14 @@ Media Queries Start Here
         font-size: 350%;
     }
 }
+
 @media only screen and (max-width: 819px) {
     #gridcontainer {
+        /*Redefined Grid layout*/
         margin-left: 5%;
+        /*less margin, for tablets and phone sizes*/
         margin-right: 5%;
+        /*less margin, for tablets and phone sizes*/
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, min-content);
         grid-template-areas:
@@ -176,7 +169,9 @@ Media Queries Start Here
             "tra"
             "bre"
             "res";
-    }}
+    }
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 300%;
@@ -188,3 +183,5 @@ Media Queries Start Here
         font-size: 250%;
     }
 }
+
+/**/
