@@ -150,7 +150,7 @@ img {
     /*Grid layout*/
     display: grid;
     grid-gap: 2.5em;
-    grid-template-columns: 0.2fr repeat(10, 1fr) 0.2fr;
+    grid-template-columns: 0.38fr repeat(10, 1fr) 0.38fr;
     grid-template-rows: repeat(8, min-content);
     grid-template-areas:
         ". ove ove ove ove ove ove ove ove im2 im2 ."
@@ -170,7 +170,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1640px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.2fr repeat(10, 1fr) 0.2fr;
+        grid-template-columns: 0.39fr repeat(10, 1fr) 0.39fr;
         grid-template-rows: repeat(9, max-content);
         grid-template-areas:
             ". ove ove ove ove ove ove ove im2 im2 im2 ."
@@ -188,7 +188,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1421px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.2fr repeat(10, 1fr) 0.2fr;
+        grid-template-columns: 0.39fr repeat(10, 1fr) 0.39fr;
         grid-template-rows: repeat(10, max-content);
         grid-template-areas:
             ". ove ove ove ove ove ove ove im2 im2 im2 ."
@@ -207,7 +207,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1360px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.2fr repeat(10, 1fr) 0.2fr;
+        grid-template-columns: 0.39fr repeat(10, 1fr) 0.39fr;
         grid-template-rows: repeat(12, max-content);
         grid-template-areas:
             ". ove ove ove ove ove ove ove ove ove ove ."
@@ -234,7 +234,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1025px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.2fr repeat(10, 1fr) 0.2fr;
+        grid-template-columns: 0.42fr repeat(10, 1fr) 0.42fr;
         grid-template-rows: repeat(11, max-content);
         grid-template-areas:
             ". ove ove ove ove ove ove ove ove ove ove ."
@@ -261,7 +261,7 @@ Media Queries Start Here
 @media only screen and (max-width: 801px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.01fr 0.5fr 1fr 0.5fr 0.01fr;
+        grid-template-columns: 0.06fr 0.5fr 1fr 0.5fr 0.06fr;
         grid-template-rows: repeat(14, max-content);
         grid-template-areas:
             ". ove ove ove ."
@@ -282,7 +282,7 @@ Media Queries Start Here
 
     img {
         /*Redefine the minimum width for all images on this page*/
-        min-width: 325px;
+        min-width: 250px;
     }
 }
 
@@ -295,7 +295,7 @@ Media Queries Start Here
 @media only screen and (max-width: 521px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.01fr 1fr 0.01fr;
+        grid-template-columns: 0.025fr 1fr 0.025fr;
         grid-template-rows: repeat(14, max-content);
         grid-template-areas:
             ". ove ."

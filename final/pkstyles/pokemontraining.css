@@ -111,7 +111,7 @@ img {
 #gridcontainer {
     /*Grid layout*/
     display: grid;
-    grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+    grid-template-columns: 0.13fr repeat(4, 1fr) 0.13fr;
     grid-template-rows: repeat(5, min-content);
     grid-gap: 2.5em;
     grid-template-areas:
@@ -131,7 +131,7 @@ Media Queries Start Here
     #gridcontainer {
         /*Redefined Grid layout*/
         display: grid;
-        grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+        grid-template-columns: 0.14fr repeat(4, 1fr) 0.14fr;
         grid-template-rows: repeat(5, min-content);
         grid-template-areas:
             ". sta sta sta im1 ."
@@ -146,6 +146,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1320px) {
     #gridcontainer {
         /*Redefined Grid layout*/
+        grid-template-columns: 0.12fr repeat(4, 1fr) 0.12fr;
         grid-template-rows: repeat(8, max-content);
         grid-template-areas:
             ". sta sta sta sta ."
@@ -185,7 +186,7 @@ Media Queries Start Here
     #gridcontainer {
         /*Redefined Grid layout*/
         display: grid;
-        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-columns: 0.024fr 1fr 0.024fr;
         grid-template-rows: repeat(10, min-content);
         grid-template-areas:
             ". sta ."

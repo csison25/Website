@@ -85,7 +85,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1200px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+        grid-template-columns: 0.05fr repeat(2, 1fr) 0.05fr;
         grid-template-rows: repeat(6, max-content);
         grid-template-areas:
             ". vgc vgc ."
@@ -100,7 +100,7 @@ Media Queries Start Here
 @media only screen and (max-width: 1130px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: 0.01fr repeat(1, 1fr) 0.01fr;
+        grid-template-columns: 0.025fr repeat(1, 1fr) 0.025fr;
         grid-template-rows: repeat(7, min-content);
         grid-template-areas:
             ". vgc ."
