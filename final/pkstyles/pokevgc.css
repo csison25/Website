@@ -24,6 +24,7 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
+        /*Creates the outline for the text*/
         -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
         2px -2px 0 var(--blackcolor),
@@ -35,6 +36,7 @@ h1 {
 }
 
 /*Grid-areas defined below*/
+/*Following grid-areas contain text*/
 #whatisvgc {
     grid-area: vgc;
 }
@@ -55,6 +57,7 @@ h1 {
     grid-area: res;
 }
 
+/*Following grid-areas are for images*/
 #img1 {
     grid-area: im1;
 }

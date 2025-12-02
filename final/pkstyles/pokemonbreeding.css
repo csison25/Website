@@ -7,6 +7,7 @@
 *****************/
 
 :root {
+    /*Following colors are for the table about IVs*/
     --tabletitlebackground: rgb(74, 119, 60);
     --tabletitlebordercolor: rgb(61, 95, 50);
     --tabletdcolor: rgb(28, 28, 28);
@@ -33,6 +34,7 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
+        /*Creates the outline for the text*/
         -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
         2px -2px 0 var(--blackcolor),
@@ -89,7 +91,8 @@ img {
     background: var(--tablelastchildcolor);
 }
 
-/*Grid-areas defined below*/
+/*Grid-areas defined below, each area is a different section of the webpage*/
+/*Following grid-areas contain text*/
 #overview {
     grid-area: ove;
 }
@@ -106,6 +109,10 @@ img {
     grid-area: bbr;
 }
 
+#essential {
+    grid-area: ess;
+}
+
 #needstobreed {
     grid-area: ntb;
 }
@@ -118,10 +125,12 @@ img {
     grid-area: res;
 }
 
+/*Following grid-area contains the table of the webpage*/
 #table {
     grid-area: tab;
 }
 
+/*Following grid-areas are for images*/
 #img2 {
     grid-area: im2;
 }
@@ -136,10 +145,6 @@ img {
 
 #img5 {
     grid-area: im5;
-}
-
-#essential {
-    grid-area: ess;
 }
 
 #img7 {

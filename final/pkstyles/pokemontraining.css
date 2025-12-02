@@ -26,6 +26,7 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
+        /*Creates the outline for the text*/
         -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
         2px -2px 0 var(--blackcolor),
@@ -41,6 +42,7 @@ img {
     min-width: 300px;
 }
 
+/*Following styles are for a flex box*/
 .flexcontainer {
     /*flex box styling */
     display: flex;
@@ -68,6 +70,7 @@ img {
 }
 
 /*Grid-areas defined below*/
+/*Following grid-areas contain text*/
 #stats {
     grid-area: sta;
 }
@@ -92,6 +95,7 @@ img {
     grid-area: res;
 }
 
+/*Following grid-areas are for images*/
 #img1 {
     grid-area: im1;
 }
@@ -186,7 +190,7 @@ Media Queries Start Here
     #gridcontainer {
         /*Redefined Grid layout*/
         display: grid;
-        grid-template-columns: 0.024fr 1fr 0.024fr;
+        grid-template-columns: 0.025fr 1fr 0.025fr;
         grid-template-rows: repeat(10, min-content);
         grid-template-areas:
             ". sta ."

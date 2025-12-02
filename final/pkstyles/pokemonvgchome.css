@@ -6,6 +6,7 @@
 
 *****************/
 :root {
+    /*Colors that are for the Read more buttons on webpage*/
     --readmorelinkbackground: rgb(173, 173, 162);
     --readmorelinkhoverbackground: rgb(188, 188, 169);
 }
@@ -28,6 +29,7 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
+        /*Creates the outline for the text*/
         -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
         2px -2px 0 var(--blackcolor),
@@ -55,11 +57,6 @@ h1 {
     box-shadow: -0.1em -0.1em 0.5em black, 0.1em 0.1em 0.5em black;
 }
 
-#overview {
-    grid-area: ove;
-    text-align: center;
-}
-
 #overview>h2 {
     /*Centers only the h2 in the Overview section*/
     text-align: center;
@@ -83,6 +80,13 @@ h1 {
 }
 
 /*Grid-areas defined below*/
+/*Line 45 is part of the grid area and contains a video, is grid-area: vid*/
+/*Following grid-areas contain text*/
+#overview {
+    grid-area: ove;
+    text-align: center;
+}
+
 #team {
     grid-area: tea;
 }
@@ -95,22 +99,20 @@ h1 {
     grid-area: bre;
 }
 
-#resrouce {
+#resource {
     grid-area: res;
 }
 
 #gridcontainer {
     /*Grid layout*/
-    margin-left: 10%;
-    margin-right: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, max-content);
+    grid-template-columns: 0.06fr repeat(2, 1fr) 0.06fr;
+    grid-template-rows: repeat(3, min-content);
     grid-gap: 2.5em;
     grid-template-areas:
-        "vid ove"
-        "tea tra"
-        "bre res";
+        ". vid ove ."
+        ". tea tra ."
+        ". bre res .";
 }
 
 /***************** *****************/
@@ -127,13 +129,13 @@ Media Queries Start Here
 @media only screen and (max-width: 1400px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 0.06fr repeat(2, 1fr) 0.06fr;
         grid-template-rows: repeat(4, min-content);
         grid-template-areas:
-            "vid vid"
-            "ove ove"
-            "tea tra"
-            "bre res";
+            ". vid vid ."
+            ". ove ove ."
+            ". tea tra ."
+            ". bre res .";
     }
 
     h1 {
@@ -156,19 +158,16 @@ Media Queries Start Here
 @media only screen and (max-width: 819px) {
     #gridcontainer {
         /*Redefined Grid layout*/
-        margin-left: 5%;
-        /*less margin, for tablets and phone sizes*/
-        margin-right: 5%;
-        /*less margin, for tablets and phone sizes*/
         grid-template-columns: 1fr;
+        grid-template-columns: 0.025fr 1fr 0.025fr;
         grid-template-rows: repeat(6, min-content);
         grid-template-areas:
-            "vid"
-            "ove"
-            "tea"
-            "tra"
-            "bre"
-            "res";
+            ". vid ."
+            ". ove ."
+            ". tea ."
+            ". tra ."
+            ". bre ."
+            ". res .";
     }
 }
 

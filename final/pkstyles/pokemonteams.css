@@ -25,6 +25,7 @@ h1 {
     margin-right: 0.25em;
     margin-left: 0.25em;
     text-shadow:
+        /*Creates the outline for the text*/
         -2px -2px 0 var(--blackcolor),
         /* Top-left shadow */
         2px -2px 0 var(--blackcolor),
@@ -52,6 +53,7 @@ img {
 /*Grid-areas defined below, ARE TWO GRIDS HERE*/
 /*Following four ID selector's grid-area definitions are for the ID: listgridcontainer 
 that is in the <div> ID: howtochoose*/
+/*Following grid-areas contain text*/
 #choosetitle {
     grid-area: tit;
 }
@@ -73,6 +75,7 @@ that is in the <div> ID: howtochoose*/
 }
 
 #listgridcontainer {
+    /*Grid layout within grid-area: #howtochoose*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, min-content);
@@ -83,6 +86,7 @@ that is in the <div> ID: howtochoose*/
 }
 
 /*Main Grid-areas defined below*/
+/*Following grid-areas contain text*/
 #overview {
     grid-area: ove;
 }
@@ -111,12 +115,12 @@ that is in the <div> ID: howtochoose*/
     grid-area: res;
 }
 
+/*Following grid-areas are for images*/
 #img2 {
     grid-area: im2;
     justify-self: center;
     /*Centers the contents in its container*/
 }
-
 
 #img3 {
     grid-area: im3;
@@ -245,7 +249,7 @@ Media Queries Start Here
     #gridcontainer {
         /*Redefined Grid layout*/
         display: grid;
-        grid-template-columns: 0.024fr repeat(1, 1fr) 0.024fr;
+        grid-template-columns: 0.025fr repeat(1, 1fr) 0.025fr;
         grid-template-rows: repeat(13, min-content);
         grid-template-areas:
             ". ove ."
