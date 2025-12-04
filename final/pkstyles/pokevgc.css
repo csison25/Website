@@ -9,8 +9,8 @@
 header {
     background-image: url("../../pictures/pokemonpics/rankedbattlescreen.jpg");
     background-repeat: no-repeat;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
     background-size: cover;
     background-position-y: 35%;
 }
